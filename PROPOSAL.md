@@ -66,7 +66,7 @@ $$
 
 #### Project plan
 
-**Week 8:** Creating Project base, Source control([GitHub](https://github.com/Sanjayviswa/Stackoverflow_survey_Analysis)), Project Management(MS Project).
+**Week 8:** Creating Project base, Source control([GitHub](https://github.com/MQCOMP6200/project-group-14)), Project Management(MS Project).
 
 - Complete Data Wrangling & basic Analysis.
 
