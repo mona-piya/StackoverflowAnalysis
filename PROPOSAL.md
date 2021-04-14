@@ -58,7 +58,7 @@ $$
 
 > Root Mean Squared Error Calculations
 
-$rmse = \sqrt{(\frac{1}{n})\sum_{i=1}^{n}(y_{i} - x_{i})^{2}}$
+$$ rmse = \sqrt{(\frac{1}{n})\sum_{i=1}^{n}(y_{i} - x_{i})^{2}} $$
 
 
 
