@@ -52,17 +52,12 @@ Planning to use ML Algorithms like Random, may include, KNN, AUC for classificat
 
 > Linear regression(RFE techniques) 
 
-$$
-y = O_1X + O_2
-$$
+![equation](https://latex.codecogs.com/png.latex?\bg_black&space;\fn_phv&space;\large&space;y&space;=&space;O_1X&space;&plus;&space;O_2)
 
 > Root Mean Squared Error Calculations
 
-$$
-rmse = \sqrt{(\frac{1}{n})\sum_{i=1}^{n}(y_{i} - x_{i})^{2}}
-$$
-
-
+![equation](https://latex.codecogs.com/png.latex?\bg_black&space;\fn_phv&space;\large&space;rmse&space;=&space;\sqrt{(\frac{1}{n})\sum_{i=1}^{n}(y_{i}&space;-&space;x_{i})^{2}})
+ 
 
 #### Project plan
 
