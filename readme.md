@@ -59,8 +59,7 @@
         <li><a href="#6.1 Predicting the growth of the language">6.1 Predicting the growth of the language</a></li>
         <li><a href="#6.2 Predicting the salary of data scientist">6.2 Predicting the salary of data scientist</a></li>
         <li><a href="#6.3 Computing Hamming Loss and Jacard Score on the above models">6.3 Computing Hamming Loss and Jacard Score on the above models</a></li>
-        <li><a href="#6.4 Predicting what causing Job Satisfaction">6.4 Predicting what causing Job Satisfaction</a></li>
-          
+        <li><a href="#6.4 Predicting what causing Job Satisfaction">6.4 Predicting what causing Job Satisfaction</a></li>  
       </ul>
     </li>
     <li>
