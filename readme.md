@@ -5,20 +5,20 @@
 <br>
 <br>
 <br>
-<h3 align="centre">Project-S1-2021</h3>
+<h2 align="centre">Project-S1-2021 (GROUP-14)</h2>
 
 <h3 align="left">Student Details</h3>
 
 | Sno  | Name                        | StudentID |
 | ---- | --------------------------- | --------- |
-| 1    | Piyakorn Munegan            |           |
-| 2    | Sabiha Sultana              |           |
-| 3    | Sanjay Kanakkot Viswanathan |           |
+| 1    | Piyakorn Munegan            | 46318461  |
+| 2    | Sabiha Sultana              | 46804994  |
+| 3    | Sanjay Kanakkot Viswanathan | 46313966  |
 | 4    | Mohammed Rizwan Amanullah   | 46277404  |
 
 # Data Cleaning
 
-<img src="https://images.unsplash.com/photo-1556155092-490a1ba16284?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" height=500 width=800>
+<img src="https://images.unsplash.com/photo-1556155092-490a1ba16284?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80">
 
 As our first step, we started gathering information of all three dataset and looked into column that answers the question we have as part of our research. The below mentioned columns were choosen as keyfactors for our analysis
 
@@ -96,6 +96,7 @@ Professional     1037
 ```
 
 Similary, we followed the same for other columns such as `Gender` `Profession` `UndergradMajor` `JobStatus` `Employment`
+
 #### Categorising the data
 
 One of our column `Ethnicity` had 173 values and had various subcategory. Some of the values are given below for reference.
@@ -152,7 +153,7 @@ The above process has been carried out for all three data frames `2018` `2019` `
 
 ## Handling the null values and outliers
 
-<img src="https://images.unsplash.com/photo-1536303100418-985cb308bb38?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" height=500 width=800>
+<img src="https://images.unsplash.com/photo-1536303100418-985cb308bb38?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80">
 
 As with any large datasources, we had lot of null values that had to be handled. For instance, the 2020 datasource had 371,506 missing values(cells) in total.  Overview of how we handled null values for few of the columns are given below. Please check out jupyter notebook for how we handled null values in all other columns in all three dataset `2018` `2019` `2020`
 
@@ -221,13 +222,13 @@ All the null values were handled for all three data sets and ensured the dataset
 
 After cleaning and handling outliers in all three datasets, we started looking for valuable insights that we can draw from it.
 
-<img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" height=500 width=800>
+<img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80">
 
 ### Distribution of respondents based on country
 
 We made use of `plotly` to create a geoplot showing where the respondents are from and how its been distributed around the world. We found that most of the respondents are from America. The second highest number of respondents are from India
 
-<ADD IMAGE>
+
 
 ### Impact of participation rate due to different ethnicity
 
@@ -246,19 +247,29 @@ for i, v in enumerate(count):
               )
 ```
 
-<ADD IMAGE>
+<img src="Data/Images/Ethnicity vs participation.png">
 
 ### Most popular programming language in three years
 
-We found javascript to be the most popular languages in all three years. Followed by HTML/CSS, SQL, and python. 
+The most language that worked between 2018 and 2020 is JavaScript(14%). The second and third highest working language is HTML/CSS(13%) and SQL(11%). JavaScript and SQL had the same steady increasing trend over the three years. The percentage of HTML/CSS was slightly increased from 2018 to 2019, however, it dropped to the same level as 2018 in 2020. Python was resonsible for about 9% in 2018, then it decresed to 8% in 2019 and it rose 1% in 2020.
 
-<ADD IMAGE>
+There are some languages that was in only 2019; Elixir, Clojure, F#, Web assembly and Erlang. Perl, Haskell, Julia was in the 2019 and 2020 surveys with a small percentages.
+
+<img src="Data/Images/popular language distribution.png">
 
 ### Distribution of developers based on their developer role
 
-Most of the respondends  were either back-end or full stack developers. 
+Most of the respondends  were either back-end or full stack developers.  For those who are working as marketing and sales professionals, their percentage is lowest compare to others.
 
-<ADD IMAGE>
+<img src="Data/Images/devtype distribution.png">
+
+
+
+### Distribution of respondents based on age
+
+Most of the respondents are in the age range 25-29. Which shows that most of the responents are those who recently joined the comapany or those who have less than 5 years of experience.
+
+<img src="Data/Images/age distribution.png">
 
 ### Salary distribution of top ten countries
 
@@ -284,7 +295,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-<ADD IMAGE>
+<img src="Data/Images/salary top ten countries.png">
 
 ### Analysis of impact of education on salary
 
@@ -292,4 +303,52 @@ The respondents who have done Doctorate has the highest mean salary among all ot
 
 What is interesting is that the respondents who dont have any degree has a mean salary of $90k. This shows the improvement in online learning and advancement of technology that is shifting the company from relying on University degrees.
 
-<ADD IMAGE>
+<img src="Data/Images/salary on edlevel.png">
+
+### Gender distribution among top five countries in 2019
+
+Based on top 5 countries where the respondents have given the survey, we categoried male and female respondents in those countries. 
+
+In term of male and female statistics, it can be seen that the US has the relatively largest female percentage at about 10.9%. Follow by Canada and UK at 9.6% and 8.0% respectively. Female respondents were arond 5% in India and Germany which is the least among the top 5 counties.
+
+<img src="Data/Images/gender distribution top 5.png">
+
+### Where most data scientist came from in 2019?
+
+There are 5,788 data scientists responded to the Stackoverflow survey in `2019`. Most data scientists are from the US with 1,550 people and it is 3 times higher than data scientists from India. Followed by Germany and the UK with 427 and 339 people respectively. The rest are Canada, France, Netherlands, Brazil, Russia and Australia which have less than 200 data scientists.
+
+<img src="Data/Images/DS_top contries.png">
+
+### Countries which pays the most for data scientist in 2019
+
+In 2019, the top three countries which have a highest mean annual salary of a data scientist are Ireland (`$275,851`), Luxembourg (​`$272,769`) and the USA (`$265,211`). Apart from that, the mean salary of the rest countries is less than (`$200,000`) per year. Japan provides the highest mean annual salary among Asian countries (`$118,969`)
+
+<img src="Data/Images/top paying countries.png">
+
+# Machine Learning
+
+### Predicting the growth of languages for upcoming years based on survey answers of previous years
+
+We segregated the languages that respondents has given and found the fraction value that each languages holds in an year. We repeated the same process for the remaining years and created a data frame. 
+
+Since we have only 3 years of dataset. There is not enough data to use time series forecasting method to predict the future popularity of programming languages. With very small number of observations, there is insufficient data to split the observations into training and testing. We need more observations to build the predictive model, this question we leave for further exploration in future projects.
+
+### Predicting the salary of data scientist
+
+We did five machine learning models to predict the salary of the data scientist. Our findings are given below.
+
+| Sno  | Model                   | Accuracy | $R^2$ Score | Time |
+| ---- | ----------------------- | -------- | ----------- | ---- |
+| 1    | Decision Tree           | 0.830    | 0.32        | 0.06 |
+| 2    | Multinomial Naive Bayes | 0.833    | 0.33        | 0.01 |
+| 3    | Gaussian Naive Bayes    | 0.63     | -0.44       | 0.01 |
+| 4    | Logistic Regression     | 0.85     | 0.40        | 0.10 |
+| 5    | Random Forest           | 0.83     | 0.32        | 1.31 |
+| 6    | Linear SVC              | 0.85     | 0.40        | 0.03 |
+
+Unfortunately, none of the models has good enough r2 values. The best model is Logistic Regression with 𝑅2R2 just approximately 0.4. We cannot confidently say that Logistic Regression is a good fit to predict the salary of Data Scientists.
+
+**This question we leave for further exploration in future projects.**
+
+
+
