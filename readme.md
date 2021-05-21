@@ -1,1 +1,446 @@
-StackOverflow Analysis
+<img src="https://stackoverflow.design/assets/img/logos/so/logo-stackoverflow.png" align="left" height="100" width="450" >
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<h2 align="centre">Project-S1-2021 (GROUP-14)</h2>
+
+<h3 align="left">Student Details</h3>
+
+| Sno  | Name                        | StudentID |
+| ---- | --------------------------- | --------- |
+| 1    | Piyakorn Munegan            | 46318461  |
+| 2    | Sabiha Sultana              | 46804994  |
+| 3    | Sanjay Kanakkot Viswanathan | 46313966  |
+| 4    | Mohammed Rizwan Amanullah   | 46277404  |
+
+<!-- TABLE OF CONTENTS -->
+
+<details open="open">
+  <summary><h2 style="display: inline-block">Table of Contents</h2></summary>
+  <ol>
+    <li>
+      <a href="#1 Project Description">Project Description</a>
+    </li>
+    <li>
+      <a href="#2 Data Source">Data Source</a>
+    </li>
+    <li>
+      <a href="#3 Key Insights">Key Insights</a>
+    </li>
+    <li>
+      <a href="#4 Data Cleaning">Data Cleaning</a>
+      <ul>
+        <li><a href="#4.1 Data Refactoring">4.1 Data Refactoring</a></li>
+        <li><a href="#4.2 Categorising the data">4.2 Categorising the data</a></li>
+        <li><a href="#4.3 Handling the null values">4.3 Handling the null values</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#5 Data Analysis and Visualization">Data Analysis And Visualization</a>
+      <ul>
+        <li><a href="#5.1 Distribution of respondents based on country">5.1 Distribution of respondents based on country</a></li>
+        <li><a href="#5.2 Impact of participation rate due to different ethnicity">5.2 Impact of participation rate due to different ethnicity</a></li>
+        <li><a href="#5.3 Most popular programming language in three years">5.3 Most popular programming language in three years</a></li>
+        <li><a href="#5.4 Distribution of developers based on their developer role">5.4 Distribution of developers based on their developer role</a></li>
+        <li><a href="#5.5 Distribution of respondents based on age">5.5 Distribution of respondents based on age</a></li>
+        <li><a href="#5.6 Salary distribution of top ten countries">5.6 Salary distribution of top ten countries</a></li>
+        <li><a href="#5.7 Analysis of impact of education on salary">5.7 Analysis of impact of education on salary</a></li>
+        <li><a href="#5.8 Gender distribution among top five countries in 2019">5.8 Gender distribution among top five countries in 2019</a></li>
+        <li><a href="#5.9 Where most data scientist came from in 2019?">5.9 Where most data scientist came from in 2019?</a></li>
+        <li><a href="#5.10 Countries which pays the most for data scientist in 2019">5.10 Countries which pays the most for data scientist in 2019</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#6 Machine Learning">Machine Learning</a>
+      <ul>
+        <li><a href="#6.1 Predicting the growth of the language">6.1 Predicting the growth of the language</a></li>
+        <li><a href="#6.2 Predicting the salary of data scientist">6.2 Predicting the salary of data scientist</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#7 Conclusion">Conclusion</a>
+    </li>
+  </ol>
+</details>
+
+# <a name="1 Project Description">Project description:</a>
+
+This repository holds **project** submission for the unit **COMP6200 - Data Science**. 
+
+Stack overflow is a professional community for developers. They conduct developer survey every year since 2011, and the collected data is available open source on the web. The latest dataset 2020 was released on March 5th, 2021. With proper analysis, the Dataset would help us to answer real-world questions. For instance, we can find the most popular language that the developer use, or we can find the developer role which pays the higest salary. Our project is to analyse last three years of developer survey and gather meaningful insights from it.
+
+As a first step, we will clean the data by removing null values and outliers in each columns. Then, refactor the columns in such a way that help us in analysis. Then we performed data analysis and machine learning on the cleaned dataset.  We  used machine learning to understand the growth of languages and the salary for data scientist in the upcoming years.
+
+The questions that we answered as part of analysis were given in the `Data analysis and visualization section`. Please refer to the Jupyter notebook file for all the codes. This `readme.md` file explains the key steps and results that we got as part of our project.
+
+# <a name="2 Data Source">Data source:</a>
+
+The dataset is very diverse and came from a Stack overflow developer survey from 180 countries. Stack overflow has data collected through surveys from 2011 to 2020. We choose 2018,2019 and 2020 to analyze for the projects. The participants mostly from the US, India, and EMEA regions. The majority of the survey respondents had a background of developer/ coding experience. We performed various analysis and our key results are given in the `Data Analysis` section.
+
+Dataset can be downloaded from the below mentioned link.
+
+**Download Link** ->   https://insights.stackoverflow.com/survey
+
+The data are available in the CSV format ranging from 40 to 150 MB with data of 1.5 Lakh survey participants. The attributes are 130,86 and 62 respectively for the years of 2018,2019 and 2020. For our project, we focused on specific features. As a result, we specificaly chose column that were required for our analysis and dropped the ones which were not required.
+
+ The reason why we chose this dataset is because of its diverse nature and it was completely uncleaned.  We, as a developer, use Stack overflow to find answers for most of the questions we get. That encouraged us to explore and derive key insights from the survey results. Also, the Insights can be used for a better understanding of the information technology and hiring employees and job seekers for preparing the career resume building.
+
+# <a name="3 Key Insights">Key Insights</a>
+
+1. JavaScript is the most popular language among all the analysed years. Recently, Python started to emerge as a popular language.
+2. About `55%` of respondents identify themselves as **full-stack developers**, and about `20%` consider themselves as **mobile developers**.
+3. Most of the respondents were from the **Unites States**. For example, in the year 2020, USA had about `20%` respondents and the second highest was india with about `14%` respondents. We have plotted geographical plot using `plotly` to map how many respondents were from each country.
+4. Consistent with the data from all three year, we still see evidence that people of color are underrepresented among professional developers. About `63%` of the respondents were of `White or european descend` 
+5. Women developers account for almost `11%` of developers in the US. Followed by Canada having `9.6%`. In countries such as Germany, India, and Poland, the participation rate is about half of that, which goes to show there is still much work to do to reach appropriate gender representation in the field.
+6. Approximately 75% of respondents worldwide completed at least the equivalent of a bachelor's degree or higher.  The average salary of respondents holding bachelors degree is $123,299. Respondents who has done Doctorate degree holds the highest mean salary of about 173,000 dollars. 
+7. About `70%` of the developers are under 35 years of age. Only 5% of the respondents were about 50 years of age.
+8. Most of the Data scientist  respondents came from United States(1550). And the country which has the second highest number of data scientist is India(540)
+9. The country which pays the highest salary for Data scientist is Ireland(USD 275,851). The second highest was Luxembourg(USD 272,796). Australia pays about (USD 146,803)
+
+
+
+# <a name="4 Data Cleaning">Data Cleaning</a>
+
+<img src="https://images.unsplash.com/photo-1556155092-490a1ba16284?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" height=500 width=800>
+
+As our first step, we started gathering information of all three dataset and looked into column that answers the question we have as part of our research. The below mentioned columns were choosen as keyfactors for our analysis
+
+```python
+['Age','ConvertedComp','Country','Currency','DevType','Employment',
+'RaceEthnicity','Gender','SalaryType','Hobby','JobSatisfaction','JobSearchStatus',
+'OperatingSystem','UndergradMajor','YearsCoding','YearsCodingProf',
+'LanguageDesireNextYear','LanguageWorkedWith','FormalEducation']
+```
+
+Some of the column names were not easily understandable, for example, the column `ConvertedComp` stands for annual salary of the respondents in USD. We changed the name of column to `SalaryUSD` for easier understanding. Similarly, name of below mentioned columns were changed
+
+| Before renaming | After renaming  |
+| :-------------: | :-------------: |
+|   MainBranch    |   Profession    |
+|    CareerSat    | JobSatisfaction |
+|     ImpSyn      | CompetenceLevel |
+|     JobSat      | CurrentJobSatis |
+|     JobSeek     |    JobStatus    |
+
+## <a name="4.1 Data Refactoring">4.1) Data Refactoring</a>
+
+Most of the columns values were more detailed and was difficult for analysis. For instance, the values in the `EdLevel` column were as below.
+
+```
+Computer science, computer engineering, or software engineering')
+Another engineering discipline (ex. civil, electrical, mechanical)'),
+Information systems, information technology, or system administration'),
+Mathematics or statistics'),
+I never declared a major'),
+A natural science (ex. biology, chemistry, physics)')
+A health science (ex. nursing, pharmacy, radiology)'),
+Web development or web design'),
+A business discipline (ex. accounting, finance, marketing)'),
+A humanities discipline (ex. literature, history, philosophy)')
+A social science (ex. anthropology, psychology, political science)')
+Fine arts or performing arts (ex. graphic design, music, studio art)')
+```
+
+We refactored the column values with a simple values that explains respondents education level.
+
+```python
+def refactor_ed(df):
+    '''function to change Education level category to Bachelors, Masters, Professional, Associate, Doctorate, No Degree'''
+    conditions_ed = [(df['EdLevel'] == 'Bachelor’s degree (BA, BS, B.Eng., etc.)'),
+                     (df['EdLevel'] == 'Master’s degree (MA, MS, M.Eng., MBA, etc.)'),
+                     (df['EdLevel'] == 'Professional degree (JD, MD, etc.)'),   
+                     (df['EdLevel'] == 'Associate degree'),
+                     (df['EdLevel'] == 'Other doctoral degree (Ph.D, Ed.D., etc.)'),
+                     (df['EdLevel'] == 'Some college/university study without earning a degree') 
+                     | (df['EdLevel'] == 'Secondary school (e.g. American high school, German Realschule or Gymnasium, etc.)') 
+                     | (df['EdLevel'] == 'Primary/elementary school')
+                     | (df['EdLevel'] == 'I never completed any formal education')]
+
+    choices_ed = ['Bachelors', 'Masters', 'Professional', 'Associate', 'Doctorate', 'No Degree']
+
+    df['EdLevel'] = np.select(conditions_ed, choices_ed, default = np.NaN)
+    
+    return df
+
+# applying function to subsets
+survey_df_2019 = refactor_ed(survey_df_2019)
+survey_df_2019['EdLevel'].replace('nan', 'Bachelors', inplace=True)
+```
+
+By doing so, reduced our column values to a simplest form
+
+```
+Bachelors       36494
+No Degree       18542
+Masters         17305
+Associate        2585
+Doctorate        2032
+Professional     1037
+```
+
+Similary, we followed the same for other columns such as `Gender` `Profession` `UndergradMajor` `JobStatus` `Employment`
+
+## <a name="4.2 Categorising the data">4.2) Categorising the data</a>
+
+One of our column `Ethnicity` had 173 values and had various subcategory. Some of the values are given below for reference.
+
+```
+'White or of European descent',
+ 'White or of European descent;Multiracial',
+ 'East Asian',
+ 'Black or of African descent;East Asian;Hispanic or Latino/Latina;Middle Eastern;Native American, Pacific Islander, or Indigenous Australian;South Asian;White or of European descent;Biracial;Multiracial',
+ 'Black or of African descent',
+ 'Hispanic or Latino/Latina;Multiracial',
+ 'Hispanic or Latino/Latina',
+ 'Middle Eastern',
+ 'South Asian',
+ 'Multiracial',
+ 'East Asian;South Asian',
+ 'Biracial',
+ 'Native American, Pacific Islander, or Indigenous Australian;White or of European descent',
+ 'Black or of African descent;White or of European descent;Biracial',
+ 'Middle Eastern;White or of European descent',
+ ......
+```
+
+We categorised them into below categories.
+
+| White or of European descent | 26848 |
+| ---------------------------- | :---: |
+| South Asian                  | 3783  |
+| Hispanic or Latino           | 3072  |
+| Middle Eastern               | 1840  |
+| East Asian                   | 1661  |
+| Black or of African descent  | 1633  |
+| Southeast Asian              | 1371  |
+| Multiracial                  |  249  |
+| Biracial                     |  138  |
+| Indigenous                   |  63   |
+
+Code we wrote to categorise are given below.
+
+```python
+#combine Ethnicity by str.match(if each string starts with a match of a regular expression pattern)
+df2020.loc[df['Ethnicity'].str.match('Biracial') == True, 'Ethnicity'] = 'Biracial'
+df2020.loc[df['Ethnicity'].str.match('Black or of African descent') == True, 'Ethnicity'] = 'Black or of African descent'
+df2020.loc[df['Ethnicity'].str.match('East Asian') == True, 'Ethnicity'] = 'East Asian'
+df2020.loc[df['Ethnicity'].str.match('Hispanic or Latino') == True, 'Ethnicity'] = 'Hispanic or Latino'
+df2020.loc[df['Ethnicity'].str.match('Indigenous') == True, 'Ethnicity'] = 'Indigenous'
+df2020.loc[df['Ethnicity'].str.match('Middle Eastern') == True, 'Ethnicity'] = 'Middle Eastern'
+df2020.loc[df['Ethnicity'].str.match('South Asian') == True, 'Ethnicity'] = 'South Asian'
+df2020.loc[df['Ethnicity'].str.match('White or of European descent') == True, 'Ethnicity'] = 'White or of European descent'
+df2020.loc[df['Ethnicity'].str.match('Multiracial') == True, 'Ethnicity'] = 'Multiracial'
+```
+
+The above process has been carried out for all three data frames `2018` `2019` `2020`
+
+## <a name="4.3 Handling the null values">4.3) Handling the null values</a>
+
+<img src="https://images.unsplash.com/photo-1536303100418-985cb308bb38?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" height=500 width=800>
+
+As with any large datasources, we had lot of null values that had to be handled. For instance, the 2020 datasource had 371,506 missing values(cells) in total.  Overview of how we handled null values for few of the columns are given below. Please check out jupyter notebook for how we handled null values in all other columns in all three dataset `2018` `2019` `2020`
+
+#### Age 
+
+Age column had 19,015 missing values in 2020 data frame. We filled the null values with the mean value of each gender. 
+
+```python
+#fill Age's null values with mean of each gender
+means = df2020.groupby('Gender')['Age'].transform('mean')
+df2020['Age'] = df2020['Age'].fillna(means)
+
+#convert from float to int
+df2020['Age'] = df2020['Age'].apply(str).str[:2]
+df2020['Age'] = df2020['Age'].apply(int)
+```
+
+**outliers** ->  removed the respondents whose age are more than 60 years and less than 15 years. 
+
+```python
+#Cleaning Age's outliers from each gender)
+df2020 = df2020[(df['Age'] >= 15) & (df2020['Age'] <= 60)]
+```
+
+For some of the columns, we made use of `bill()` and `fill()` method to fill the null values and made sure that the filling the values this way dosent change the order of values. Lets take an example of `DevType` column. 
+
+| DevType                                                 | Before filling null | After bill() & fill() |
+| ------------------------------------------------------- | ------------------- | --------------------- |
+| full-stack                                              | 3399                | 3940                  |
+| back-end                                                | 2374                | 2721                  |
+| back-end;Developer, <br>front-end;Developer, full-stack | 1838                | 2146                  |
+| back-end;Developer, full-stack                          | 1216                | 1411                  |
+| front-end                                               | 1071                | 1229                  |
+| mobile                                                  | 953                 | 1074                  |
+| desktop or enterprise applications<br>full-stack        | 668                 | 779                   |
+| front-end;Developer, full-stack                         | 667                 | 758                   |
+| back-end;Developer, desktop or enterprise applications  | 528                 | 617                   |
+
+As we can see above, order of values never changed while filling the null values with bfill and ffill method. 
+
+For `EdLevel` we had only 993 null values. So we assigned it to bachelors degree as the number of respondents who have bachelors degree were 20,290.
+
+All the null values were handled for all three data sets and ensured the dataset is as below.
+
+| Columns(2020)          | Before handling null | After handling null |
+| ---------------------- | :------------------: | :-----------------: |
+| Age                    |        19015         |          0          |
+| Gender                 |        13904         |          0          |
+| SalaryUSD              |        29705         |          0          |
+| Country                |         389          |          0          |
+| DevType                |        15091         |          0          |
+| Hobbyist               |          45          |          0          |
+| EdLevel                |         7030         |          0          |
+| Employment             |         607          |          0          |
+| Ethnicity              |        18513         |          0          |
+| CurrentJobSatis        |        19267         |          0          |
+| JobStatus              |        12734         |          0          |
+| LanguageDesireNextYear |        10348         |          0          |
+| LanguageWorkedWith     |         7083         |          0          |
+| Profession             |         299          |          0          |
+| UndergradMajor         |        13466         |          0          |
+| YearsCodePro           |        18112         |          0          |
+| JobSeek                |         2153         |          0          |
+
+# <a name="5 Data Analysis and Visualization">Data Analysis and Visualization</a>
+
+After cleaning and handling outliers in all three datasets, we started looking for valuable insights that we can draw from it.
+
+<img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80">
+
+## <a name="5.1 Distribution of respondents based on country">5.1) Distribution of respondents based on country</a>
+
+We made use of `plotly` to create a geoplot showing where the respondents are from and how its been distributed around the world. We found that most of the respondents are from America. The second highest number of respondents are from India
+
+<img src="Data/Images/Geo plot.png">
+
+## <a name="5.2 Impact of participation rate due to different ethnicity">5.2) Impact of participation rate due to different ethnicity</a>
+
+Consistent with data in all three years, We found that `white or european descent` has highest participation rate overall. 
+
+```python
+fig, ax = plt.subplots(figsize=(15, 5))
+sns.barplot(x = count, y = participation_rate, palette = 'Set1')
+plt.xlabel('Ethnicity', size = 16)
+for i, v in enumerate(count):
+    ax.text(  v+3,
+              i-.15,
+              f'{count[i]*100/sum(count):.2f}%',
+              style = 'italic',
+              fontsize=14,
+              )
+```
+
+<img src="Data/Images/Ethnicity vs participation.png">
+
+## <a name="5.3 Most popular programming language in three years">5.3) Most popular programming language in three years</a>
+
+The most language that worked between 2018 and 2020 is JavaScript(14%). The second and third highest working language is HTML/CSS(13%) and SQL(11%). JavaScript and SQL had the same steady increasing trend over the three years. The percentage of HTML/CSS was slightly increased from 2018 to 2019, however, it dropped to the same level as 2018 in 2020. Python was resonsible for about 9% in 2018, then it decresed to 8% in 2019 and it rose 1% in 2020.
+
+There are some languages that was in only 2019; Elixir, Clojure, F#, Web assembly and Erlang. Perl, Haskell, Julia was in the 2019 and 2020 surveys with a small percentages.
+
+<img src="Data/Images/popular language distribution.png">
+
+## <a name="5.4 Distribution of developers based on their developer role">5.4) Distribution of developers based on their developer role</a>
+
+Most of the respondends  were either back-end or full stack developers.  For those who are working as marketing and sales professionals, their percentage is lowest compare to others.
+
+<img src="Data/Images/devtype distribution.png">
+
+
+
+## <a name="5.5 Distribution of respondents based on age">5.5) Distribution of respondents based on age</a>
+
+Most of the respondents are in the age range 25-29. Which shows that most of the responents are those who recently joined the comapany or those who have less than 5 years of experience.
+
+<img src="Data/Images/age distribution.png">
+
+## <a name="5.6 Salary distribution of top ten countries">5.6) Salary distribution of top ten countries</a>
+
+Overall, the contry which has highest mean annual salary is United States of America(240,000) Dollars. The second highest country which provides highest mean salary is Australia(164,926) Dollars. Though India has higher number of respondents, it has lowest mean salary of $25,213 which shows that mean salary of developed country is much higher than that of developing countries.
+
+```python
+fig = plt.figure(figsize = (20, 10))
+
+countries = cleaned_df_2019['Country'].value_counts().sort_values(ascending = False)[:10].index.tolist()
+
+for i, country in enumerate(countries):
+    plt.subplot(4, 3, i + 1)
+    temp_salaries = cleaned_df_2019.loc[cleaned_df_2019['Country'] == country, 'SalaryUSD']
+
+    ax = temp_salaries.plot(kind = 'kde')
+    ax.axvline(temp_salaries.mean(), linestyle = '-', color = 'red')
+    ax.text((temp_salaries.mean() + 1500), (float(ax.get_ylim()[1]) * 0.55), 'mean = $ ' + str(round(temp_salaries.mean(),2)), fontsize = 12)
+    ax.set_xlabel('Annual Salary in USD')
+    ax.set_xlim(-temp_salaries.mean(), temp_salaries.mean() + 2 * temp_salaries.std())
+    ax.set_title('Annual Salary Distribution in {}'.format(country))
+
+plt.tight_layout()
+plt.show()
+```
+
+<img src="Data/Images/salary top ten countries.png">
+
+## <a name="5.7 Analysis of impact of education on salary">5.7) Analysis of impact of education on salary</a>
+
+The respondents who have done Doctorate has the highest mean salary among all other education level. Secondly, the respondents who has done Bachelors degree has more salary than that of Masters degree holders. This may be due to years of professional coding experience and due to the higher number of respondents in that category than that of Masters degree(No of respondends in Bachelor degree is 35659 and number of respondents in masters degree is 16940)
+
+What is interesting is that the respondents who dont have any degree has a mean salary of $90k. This shows the improvement in online learning and advancement of technology that is shifting the company from relying on University degrees.
+
+<img src="Data/Images/salary on edlevel.png">
+
+## <a name="5.8 Gender distribution among top five countries in 2019">5.8) Gender distribution among top five countries in 2019</a>
+
+Based on top 5 countries where the respondents have given the survey, we categoried male and female respondents in those countries. 
+
+In term of male and female statistics, it can be seen that the US has the relatively largest female percentage at about 10.9%. Follow by Canada and UK at 9.6% and 8.0% respectively. Female respondents were arond 5% in India and Germany which is the least among the top 5 counties.
+
+<img src="Data/Images/gender distribution top 5.png">
+
+## <a name="5.9 Where most data scientist came from in 2019?">5.9) Where most data scientist came from in 2019?</a>
+
+There are 5,788 data scientists responded to the Stackoverflow survey in `2019`. Most data scientists are from the US with 1,550 people and it is 3 times higher than data scientists from India. Followed by Germany and the UK with 427 and 339 people respectively. The rest are Canada, France, Netherlands, Brazil, Russia and Australia which have less than 200 data scientists.
+
+<img src="Data/Images/DS_top contries.png">
+
+## <a name="5.10 Countries which pays the most for data scientist in 2019">5.10) Countries which pays the most for data scientist in 2019</a>
+
+In 2019, the top three countries which have a highest mean annual salary of a data scientist are Ireland (`$275,851`), Luxembourg (​`$272,769`) and the USA (`$265,211`). Apart from that, the mean salary of the rest countries is less than (`$200,000`) per year. Japan provides the highest mean annual salary among Asian countries (`$118,969`)
+
+<img src="Data/Images/top paying countries.png">
+
+# <a name="6 Machine Learning">6 Machine Learning</a>
+
+### <a name="6.1 Predicting the growth of the language">6.1) Predicting the growth of the language</a>
+
+### Predicting the growth of languages for upcoming years based on survey answers of previous years
+
+We segregated the languages that respondents has given and found the fraction value that each languages holds in an year. We repeated the same process for the remaining years and created a data frame. 
+
+Since we have only 3 years of dataset. There is not enough data to use time series forecasting method to predict the future popularity of programming languages. With very small number of observations, there is insufficient data to split the observations into training and testing. We need more observations to build the predictive model, this question we leave for further exploration in future projects.
+
+### <a name="6.2 Predicting the salary of data scientist">6.2) Predicting the salary of data scientist</a>
+
+We did five machine learning models to predict the salary of the data scientist. Our findings are given below.
+
+| Sno  | Model                   | Accuracy | $R^2$ Score | Time |
+| ---- | ----------------------- | -------- | ----------- | ---- |
+| 1    | Decision Tree           | 0.830    | 0.32        | 0.06 |
+| 2    | Multinomial Naive Bayes | 0.833    | 0.33        | 0.01 |
+| 3    | Gaussian Naive Bayes    | 0.63     | -0.44       | 0.01 |
+| 4    | Logistic Regression     | 0.85     | 0.40        | 0.10 |
+| 5    | Random Forest           | 0.83     | 0.32        | 1.31 |
+| 6    | Linear SVC              | 0.85     | 0.40        | 0.03 |
+
+Unfortunately, none of the models has good enough r2 values. The best model is Logistic Regression with 𝑅2R2 just approximately 0.4. We cannot confidently say that Logistic Regression is a good fit to predict the salary of Data Scientists.
+
+**This question we leave for further exploration in future projects.**
+
+
+
+# <a name="7 Conclusion">Conclusion</a>
+
+
+
