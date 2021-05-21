@@ -228,7 +228,7 @@ After cleaning and handling outliers in all three datasets, we started looking f
 
 We made use of `plotly` to create a geoplot showing where the respondents are from and how its been distributed around the world. We found that most of the respondents are from America. The second highest number of respondents are from India
 
-
+<img src="Data/Images/Geo plot.png">
 
 ### Impact of participation rate due to different ethnicity
 
