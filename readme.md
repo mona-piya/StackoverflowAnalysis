@@ -58,6 +58,9 @@
       <ul>
         <li><a href="#6.1 Predicting the growth of the language">6.1 Predicting the growth of the language</a></li>
         <li><a href="#6.2 Predicting the salary of data scientist">6.2 Predicting the salary of data scientist</a></li>
+        <li><a href="#6.3 Computing Hamming Loss and Jacard Score on the above models">6.3 Computing Hamming Loss and Jacard Score on the above models</a></li>
+        <li><a href="#6.4 Predicting what causing Job Satisfaction">6.4 Predicting what causing Job Satisfaction</a></li>
+          
       </ul>
     </li>
     <li>
@@ -438,6 +441,9 @@ Unfortunately, none of the models has good enough r2 values. The best model is L
 
 **This question we leave for further exploration in future projects.**
 
+### <a name="6.3 Computing Hamming Loss and Jacard Score on the above models">6.3) Computing Hamming Loss and Jacard Score on the above models</a>
+
+### <a name="6.4 Predicting what causing Job Satisfaction">6.4) Predicting what causing Job Satisfaction</a>
 
 
 # <a name="7 Conclusion">Conclusion</a>
