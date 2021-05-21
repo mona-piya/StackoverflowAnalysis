@@ -16,9 +16,95 @@
 | 3    | Sanjay Kanakkot Viswanathan | 46313966  |
 | 4    | Mohammed Rizwan Amanullah   | 46277404  |
 
-# Data Cleaning
+<!-- TABLE OF CONTENTS -->
 
-<img src="https://images.unsplash.com/photo-1556155092-490a1ba16284?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80">
+<details open="open">
+  <summary><h2 style="display: inline-block">Table of Contents</h2></summary>
+  <ol>
+    <li>
+      <a href="#1 Project Description">Project Description</a>
+    </li>
+    <li>
+      <a href="#2 Data Source">Data Source</a>
+    </li>
+    <li>
+      <a href="#3 Key Insights">Key Insights</a>
+    </li>
+    <li>
+      <a href="#4 Data Cleaning">Data Cleaning</a>
+      <ul>
+        <li><a href="#4.1 Data Refactoring">4.1 Data Refactoring</a></li>
+        <li><a href="#4.2 Categorising the data">4.2 Categorising the data</a></li>
+        <li><a href="#4.3 Handling the null values">4.3 Handling the null values</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#5 Data Analysis and Visualization">Data Analysis And Visualization</a>
+      <ul>
+        <li><a href="#5.1 Distribution of respondents based on country">5.1 Distribution of respondents based on country</a></li>
+        <li><a href="#5.2 Impact of participation rate due to different ethnicity">5.2 Impact of participation rate due to different ethnicity</a></li>
+        <li><a href="#5.3 Most popular programming language in three years">5.3 Most popular programming language in three years</a></li>
+        <li><a href="#5.4 Distribution of developers based on their developer role">5.4 Distribution of developers based on their developer role</a></li>
+        <li><a href="#5.5 Distribution of respondents based on age">5.5 Distribution of respondents based on age</a></li>
+        <li><a href="#5.6 Salary distribution of top ten countries">5.6 Salary distribution of top ten countries</a></li>
+        <li><a href="#5.7 Analysis of impact of education on salary">5.7 Analysis of impact of education on salary</a></li>
+        <li><a href="#5.8 Gender distribution among top five countries in 2019">5.8 Gender distribution among top five countries in 2019</a></li>
+        <li><a href="#5.9 Where most data scientist came from in 2019?">5.9 Where most data scientist came from in 2019?</a></li>
+        <li><a href="#5.10 Countries which pays the most for data scientist in 2019">5.10 Countries which pays the most for data scientist in 2019</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#6 Machine Learning">Machine Learning</a>
+      <ul>
+        <li><a href="#6.1 Predicting the growth of the language">6.1 Predicting the growth of the language</a></li>
+        <li><a href="#6.2 Predicting the salary of data scientist">6.2 Predicting the salary of data scientist</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#7 Conclusion">Conclusion</a>
+    </li>
+  </ol>
+</details>
+
+# <a name="1 Project Description">1 Project description:</a>
+
+This repository holds **project** submission for the unit **COMP6200 - Data Science**. 
+
+Stack overflow is a professional community for developers. They conduct developer survey every year since 2011, and the collected data is available open source on the web. The latest dataset 2020 was released on March 5th, 2021. With proper analysis, the Dataset would help us to answer real-world questions. For instance, we can find the most popular language that the developer use, or we can find the developer role which pays the higest salary. Our project is to analyse last three years of developer survey and gather meaningful insights from it.
+
+As a first step, we will clean the data by removing null values and outliers in each columns. Then, refactor the columns in such a way that help us in analysis. Then we performed data analysis and machine learning on the cleaned dataset.  We  used machine learning to understand the growth of languages and the salary for data scientist in the upcoming years.
+
+The questions that we answered as part of analysis were given in the `Data analysis and visualization section`. Please refer to the Jupyter notebook file for all the codes. This `readme.md` file explains the key steps and results that we got as part of our project.
+
+# <a name="2 Data Source">Data source:</a>
+
+The dataset is very diverse and came from a Stack overflow developer survey from 180 countries. Stack overflow has data collected through surveys from 2011 to 2020. We choose 2018,2019 and 2020 to analyze for the projects. The participants mostly from the US, India, and EMEA regions. The majority of the survey respondents had a background of developer/ coding experience. We performed various analysis and our key results are given in the `Data Analysis` section.
+
+Dataset can be downloaded from the below mentioned link.
+
+**Download Link** ->   https://insights.stackoverflow.com/survey
+
+The data are available in the CSV format ranging from 40 to 150 MB with data of 1.5 Lakh survey participants. The attributes are 130,86 and 62 respectively for the years of 2018,2019 and 2020. For our project, we focused on specific features. As a result, we specificaly chose column that were required for our analysis and dropped the ones which were not required.
+
+ The reason why we chose this dataset is because of its diverse nature and it was completely uncleaned.  We, as a developer, use Stack overflow to find answers for most of the questions we get. That encouraged us to explore and derive key insights from the survey results. Also, the Insights can be used for a better understanding of the information technology and hiring employees and job seekers for preparing the career resume building.
+
+# <a name="3 Key Insights">3 Key Insights</a>
+
+1. JavaScript is the most popular language among all the analysed years. Recently, Python started to emerge as a popular language.
+2. About `55%` of respondents identify themselves as **full-stack developers**, and about `20%` consider themselves as **mobile developers**.
+3. Most of the respondents were from the **Unites States**. For example, in the year 2020, USA had about `20%` respondents and the second highest was india with about `14%` respondents. We have plotted geographical plot using `plotly` to map how many respondents were from each country.
+4. Consistent with the data from all three year, we still see evidence that people of color are underrepresented among professional developers. About `63%` of the respondents were of `White or european descend` 
+5. Women developers account for almost `11%` of developers in the US. Followed by Canada having `9.6%`. In countries such as Germany, India, and Poland, the participation rate is about half of that, which goes to show there is still much work to do to reach appropriate gender representation in the field.
+6. Approximately 75% of respondents worldwide completed at least the equivalent of a bachelor's degree or higher.  The average salary of respondents holding bachelors degree is $123,299. Respondents who has done Doctorate degree holds the highest mean salary of about 173,000 dollars. 
+7. About `70%` of the developers are under 35 years of age. Only 5% of the respondents were about 50 years of age.
+8. Most of the Data scientist  respondents came from United States(1550). And the country which has the second highest number of data scientist is India(540)
+9. The country which pays the highest salary for Data scientist is Ireland(USD 275,851). The second highest was Luxembourg(USD 272,796). Australia pays about (USD 146,803)
+
+
+
+# <a name="4 Data Cleaning">4 Data Cleaning</a>
+
+<img src="https://images.unsplash.com/photo-1556155092-490a1ba16284?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" height=500 width=800>
 
 As our first step, we started gathering information of all three dataset and looked into column that answers the question we have as part of our research. The below mentioned columns were choosen as keyfactors for our analysis
 
@@ -39,7 +125,7 @@ Some of the column names were not easily understandable, for example, the column
 |     JobSat      | CurrentJobSatis |
 |     JobSeek     |    JobStatus    |
 
-#### Data refactoring
+## <a name="4.1 Data Refactoring">4.1 Data Refactoring</a>
 
 Most of the columns values were more detailed and was difficult for analysis. For instance, the values in the `EdLevel` column were as below.
 
@@ -97,7 +183,7 @@ Professional     1037
 
 Similary, we followed the same for other columns such as `Gender` `Profession` `UndergradMajor` `JobStatus` `Employment`
 
-#### Categorising the data
+## <a name="4.2 Categorising the data">4.2 Categorising the data</a>
 
 One of our column `Ethnicity` had 173 values and had various subcategory. Some of the values are given below for reference.
 
@@ -151,9 +237,9 @@ df2020.loc[df['Ethnicity'].str.match('Multiracial') == True, 'Ethnicity'] = 'Mul
 
 The above process has been carried out for all three data frames `2018` `2019` `2020`
 
-## Handling the null values and outliers
+## <a name="4.3 Handling the null values">4.3 Handling the null values</a>
 
-<img src="https://images.unsplash.com/photo-1536303100418-985cb308bb38?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80">
+<img src="https://images.unsplash.com/photo-1536303100418-985cb308bb38?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" height=500 width=800>
 
 As with any large datasources, we had lot of null values that had to be handled. For instance, the 2020 datasource had 371,506 missing values(cells) in total.  Overview of how we handled null values for few of the columns are given below. Please check out jupyter notebook for how we handled null values in all other columns in all three dataset `2018` `2019` `2020`
 
@@ -218,19 +304,19 @@ All the null values were handled for all three data sets and ensured the dataset
 | YearsCodePro           |        18112         |          0          |
 | JobSeek                |         2153         |          0          |
 
-## Data analysis
+# <a name="5 Data Analysis and Visualization">5 Data Analysis and Visualization</a>
 
 After cleaning and handling outliers in all three datasets, we started looking for valuable insights that we can draw from it.
 
 <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80">
 
-### Distribution of respondents based on country
+## <a name="5.1 Distribution of respondents based on country">5.1 Distribution of respondents based on country</a>
 
 We made use of `plotly` to create a geoplot showing where the respondents are from and how its been distributed around the world. We found that most of the respondents are from America. The second highest number of respondents are from India
 
 <img src="Data/Images/Geo plot.png">
 
-### Impact of participation rate due to different ethnicity
+## <a name="5.2 Impact of participation rate due to different ethnicity">5.2 Impact of participation rate due to different ethnicity</a>
 
 Consistent with data in all three years, We found that `white or european descent` has highest participation rate overall. 
 
@@ -249,7 +335,7 @@ for i, v in enumerate(count):
 
 <img src="Data/Images/Ethnicity vs participation.png">
 
-### Most popular programming language in three years
+## <a name="5.3 Most popular programming language in three years">5.3 Most popular programming language in three years</a>
 
 The most language that worked between 2018 and 2020 is JavaScript(14%). The second and third highest working language is HTML/CSS(13%) and SQL(11%). JavaScript and SQL had the same steady increasing trend over the three years. The percentage of HTML/CSS was slightly increased from 2018 to 2019, however, it dropped to the same level as 2018 in 2020. Python was resonsible for about 9% in 2018, then it decresed to 8% in 2019 and it rose 1% in 2020.
 
@@ -257,7 +343,7 @@ There are some languages that was in only 2019; Elixir, Clojure, F#, Web assembl
 
 <img src="Data/Images/popular language distribution.png">
 
-### Distribution of developers based on their developer role
+## <a name="5.4 Distribution of developers based on their developer role">5.4 Distribution of developers based on their developer role</a>
 
 Most of the respondends  were either back-end or full stack developers.  For those who are working as marketing and sales professionals, their percentage is lowest compare to others.
 
@@ -265,13 +351,13 @@ Most of the respondends  were either back-end or full stack developers.  For tho
 
 
 
-### Distribution of respondents based on age
+## <a name="5.5 Distribution of respondents based on age">5.5 Distribution of respondents based on age</a>
 
 Most of the respondents are in the age range 25-29. Which shows that most of the responents are those who recently joined the comapany or those who have less than 5 years of experience.
 
 <img src="Data/Images/age distribution.png">
 
-### Salary distribution of top ten countries
+## <a name="5.6 Salary distribution of top ten countries">5.6 Salary distribution of top ten countries</a>
 
 Overall, the contry which has highest mean annual salary is United States of America(240,000) Dollars. The second highest country which provides highest mean salary is Australia(164,926) Dollars. Though India has higher number of respondents, it has lowest mean salary of $25,213 which shows that mean salary of developed country is much higher than that of developing countries.
 
@@ -297,7 +383,7 @@ plt.show()
 
 <img src="Data/Images/salary top ten countries.png">
 
-### Analysis of impact of education on salary
+## <a name="5.7 Analysis of impact of education on salary">5.7 Analysis of impact of education on salary</a>
 
 The respondents who have done Doctorate has the highest mean salary among all other education level. Secondly, the respondents who has done Bachelors degree has more salary than that of Masters degree holders. This may be due to years of professional coding experience and due to the higher number of respondents in that category than that of Masters degree(No of respondends in Bachelor degree is 35659 and number of respondents in masters degree is 16940)
 
@@ -305,7 +391,7 @@ What is interesting is that the respondents who dont have any degree has a mean 
 
 <img src="Data/Images/salary on edlevel.png">
 
-### Gender distribution among top five countries in 2019
+## <a name="5.8 Gender distribution among top five countries in 2019">5.8 Gender distribution among top five countries in 2019</a>
 
 Based on top 5 countries where the respondents have given the survey, we categoried male and female respondents in those countries. 
 
@@ -313,19 +399,21 @@ In term of male and female statistics, it can be seen that the US has the relati
 
 <img src="Data/Images/gender distribution top 5.png">
 
-### Where most data scientist came from in 2019?
+## <a name="5.9 Where most data scientist came from in 2019?">5.9 Where most data scientist came from in 2019?</a>
 
 There are 5,788 data scientists responded to the Stackoverflow survey in `2019`. Most data scientists are from the US with 1,550 people and it is 3 times higher than data scientists from India. Followed by Germany and the UK with 427 and 339 people respectively. The rest are Canada, France, Netherlands, Brazil, Russia and Australia which have less than 200 data scientists.
 
 <img src="Data/Images/DS_top contries.png">
 
-### Countries which pays the most for data scientist in 2019
+## <a name="5.10 Countries which pays the most for data scientist in 2019">5.10 Countries which pays the most for data scientist in 2019</a>
 
 In 2019, the top three countries which have a highest mean annual salary of a data scientist are Ireland (`$275,851`), Luxembourg (​`$272,769`) and the USA (`$265,211`). Apart from that, the mean salary of the rest countries is less than (`$200,000`) per year. Japan provides the highest mean annual salary among Asian countries (`$118,969`)
 
 <img src="Data/Images/top paying countries.png">
 
-# Machine Learning
+# <a name="6 Machine Learning">6 Machine Learning</a>
+
+### <a name="6.1 Predicting the growth of the language">6.1 Predicting the growth of the language</a>
 
 ### Predicting the growth of languages for upcoming years based on survey answers of previous years
 
@@ -333,7 +421,7 @@ We segregated the languages that respondents has given and found the fraction va
 
 Since we have only 3 years of dataset. There is not enough data to use time series forecasting method to predict the future popularity of programming languages. With very small number of observations, there is insufficient data to split the observations into training and testing. We need more observations to build the predictive model, this question we leave for further exploration in future projects.
 
-### Predicting the salary of data scientist
+### <a name="6.2 Predicting the salary of data scientist">6.2 Predicting the salary of data scientist</a>
 
 We did five machine learning models to predict the salary of the data scientist. Our findings are given below.
 
@@ -349,6 +437,10 @@ We did five machine learning models to predict the salary of the data scientist.
 Unfortunately, none of the models has good enough r2 values. The best model is Logistic Regression with 𝑅2R2 just approximately 0.4. We cannot confidently say that Logistic Regression is a good fit to predict the salary of Data Scientists.
 
 **This question we leave for further exploration in future projects.**
+
+
+
+# <a name="7 Conclusion">7 Conclusion</a>
 
 
 
