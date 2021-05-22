@@ -106,7 +106,7 @@ The data are available in the CSV format ranging from 40 to 150 MB with data of 
 
 # <a name="4 Data Cleaning">Data Cleaning</a>
 
-<img src="https://images.unsplash.com/photo-1556155092-490a1ba16284?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" height=500 width=800>
+<img src="https://recodehive.com/wp-content/uploads/2021/05/Data-Cleaning-1024x361.png" height=500 width=800>
 
 As our first step, we started gathering information of all three dataset and looked into column that answers the question we have as part of our research. The below mentioned columns were choosen as keyfactors for our analysis
 
@@ -241,7 +241,7 @@ The above process has been carried out for all three data frames `2018` `2019` `
 
 ## <a name="4.3 Handling the null values">4.3) Handling the null values</a>
 
-<img src="https://images.unsplash.com/photo-1536303100418-985cb308bb38?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" height=500 width=800>
+<img src="https://recodehive.com/wp-content/uploads/2021/05/Message-from-Founder-1024x576.png" height=500 width=800>
 
 As with any large datasources, we had lot of null values that had to be handled. For instance, the 2020 datasource had 371,506 missing values(cells) in total.  Overview of how we handled null values for few of the columns are given below. Please check out jupyter notebook for how we handled null values in all other columns in all three dataset `2018` `2019` `2020`
 
@@ -310,7 +310,7 @@ All the null values were handled for all three data sets and ensured the dataset
 
 After cleaning and handling outliers in all three datasets, we started looking for valuable insights that we can draw from it.
 
-<img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80">
+<img src="https://recodehive.com/wp-content/uploads/2021/05/Message-from-Founder-1024x576.jpg">
 
 ## <a name="5.1 Distribution of respondents based on country">5.1) Distribution of respondents based on country</a>
 
@@ -444,8 +444,32 @@ Unfortunately, none of the models has good enough r2 values. The best model is L
 
 ### <a name="6.3 Computing Hamming Loss and Jacard Score on the above models">6.3) Computing Hamming Loss and Jacard Score on the above models</a>
 
+- Hamming loss is the fraction of labels that are incorrectly predicted ( evaluation metrics for a classifier model.)<br>
+  Hamming loss value range between 0 and 1, Having HL less is the best.
+- The Jaccard Index, also known as the Jaccard similarity coefficient, is a statistic used in understanding the similarities between sample sets. (To measure Similarity)<br>
+  Jaccard , is a measurement utilized in understanding the similitudes between test sets. The estimation underscores comparability between limited example sets, and is    officially characterized as the size of the crossing point separated by the size of the association of the example sets.
+
+| Sno  | Model                   | HL       | Jaccard Score | 
+| ---- | ----------------------- | -------- | -----------   |
+| 1    | Random Forest           | 0.1660   | 0.7088        | 
+| 2    | MLPClassifier           | 0.1729   | 0.7081        | 
+| 3    | SGDClassifier           | 0.1473   | 0.7400        | 
+| 4    | Logistic Regression     | 0.1481   | 0.7402        | 
+| 5    | MultinomialNB           | 0.1680   | 0.7124        | 
+| 6    | Linear SVC              | 0.1481   | 0.7444        |
+
+It has been found that better Hamming loss has been found in Logistic Regression and Linear SVC which is 0.14815
+Jaccard similarity scores gives us distribution of label sets when using the models.
+
 ### <a name="6.4 Predicting what causing Job Satisfaction">6.4) Predicting what causing Job Satisfaction</a>
 
+<img src="https://recodehive.com/wp-content/uploads/2021/05/2021-05-22_13-04-58-1024x575.png" height=500 width=800>
+
+- best mean cross-validation score: -0.262
+- best parameters: {'max_depth': 40, 'min_samples_leaf': 10}
+- test-set score: -0.261
+
+Here Random Forest is used to Predict the Job satisfaction, model did not yield much better output and turned out to be very complex to get insights. This question we leave for further exploration in future projects using Random forest Regressor which may yield good results.
 
 # <a name="7 Conclusion">Conclusion</a>
 
