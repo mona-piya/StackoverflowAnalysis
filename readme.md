@@ -92,7 +92,7 @@ The data are available in the CSV format ranging from 40 to 150 MB with data of 
 
 # <a name="3 Key Insights">Key Insights</a>
 
-1. JavaScript is the most popular language among all the analysed years. Recently, Python started to emerge as a popular language.
+1. JavaScript has maintained it's stronghold as the most commonly used programming language. Almost 70% of the respondents are using Javascript. HTML/CSS stands as the second most popular language with about 63%
 2. About `55%` of respondents identify themselves as **full-stack developers**, and about `20%` consider themselves as **mobile developers**.
 3. Most of the respondents were from the **United States**. For example, in the year 2020, USA had about `20%` respondents and the second highest was india with about `14%` respondents. We have plotted geographical plot using `plotly` to map how many respondents were from each country.
 4. Consistent with the data from all three year, we still see evidence that people of color are underrepresented among professional developers. About `63%` of the respondents were of `White or european descend` 
