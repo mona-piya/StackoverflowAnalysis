@@ -106,7 +106,7 @@ The data are available in the CSV format ranging from 40 to 150 MB with data of 
 
 # <a name="4 Data Cleaning">Data Cleaning</a>
 
-<img src="https://recodehive.com/wp-content/uploads/2021/05/Data-Cleaning-1024x361.png" height=500 width=800>
+<img src="https://recodehive.com/wp-content/uploads/2021/05/Data-Cleaning-1024x361.png">
 
 As our first step, we started gathering information of all three dataset and looked into column that answers the question we have as part of our research. The below mentioned columns were choosen as keyfactors for our analysis
 
@@ -241,7 +241,7 @@ The above process has been carried out for all three data frames `2018` `2019` `
 
 ## <a name="4.3 Handling the null values">4.3) Handling the null values</a>
 
-<img src="https://recodehive.com/wp-content/uploads/2021/05/Message-from-Founder-1024x576.png" height=500 width=800>
+<img src="https://recodehive.com/wp-content/uploads/2021/05/Message-from-Founder-1024x576.png">
 
 As with any large datasources, we had lot of null values that had to be handled. For instance, the 2020 datasource had 371,506 missing values(cells) in total.  Overview of how we handled null values for few of the columns are given below. Please check out jupyter notebook for how we handled null values in all other columns in all three dataset `2018` `2019` `2020`
 
@@ -463,7 +463,7 @@ Jaccard similarity scores gives us distribution of label sets when using the mod
 
 ### <a name="6.4 Predicting what causing Job Satisfaction">6.4) Predicting what causing Job Satisfaction</a>
 
-<img src="https://recodehive.com/wp-content/uploads/2021/05/2021-05-22_13-04-58-1024x575.png" height=500 width=800>
+<img src="https://recodehive.com/wp-content/uploads/2021/05/2021-05-22_13-04-58-1024x575.png">
 
 - best mean cross-validation score: -0.262
 - best parameters: {'max_depth': 40, 'min_samples_leaf': 10}
