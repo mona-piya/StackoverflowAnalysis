@@ -72,7 +72,7 @@
 
 This repository holds **project** submission for the unit **COMP6200 - Data Science**. 
 
-Stack overflow is a professional community for developers. They conduct developer survey every year since 2011, and the collected data is available open source on the web. The latest dataset 2020 was released on March 5th, 2021. With proper analysis, the Dataset would help us to answer real-world questions. For instance, we can find the most popular language that the developer use, or we can find the developer role which pays the higest salary. Our project is to analyse last three years of developer survey and gather meaningful insights from it.
+Stack overflow is a professional community for developers. They conduct developer surveys every year since 2011, and the collected data is available open source on the web. The latest dataset 2020 was released on March 5th, 2021. With proper analysis, the Dataset would help us to answer real-world questions. For instance, we can find the most popular language that the developer use, or we can find the developer role which pays the highest salary. Our project is to analyse last three years of developer survey and gather meaningful insights from it.
 
 As a first step, we will clean the data by removing null values and outliers in each columns. Then, refactor the columns in such a way that help us in analysis. Then we performed data analysis and machine learning on the cleaned dataset.  We  used machine learning to understand the growth of languages and the salary for data scientist in the upcoming years.
 
