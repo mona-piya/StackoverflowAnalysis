@@ -94,13 +94,13 @@ The data are available in the CSV format ranging from 40 to 150 MB with data of 
 
 1. JavaScript is the most popular language among all the analysed years. Recently, Python started to emerge as a popular language.
 2. About `55%` of respondents identify themselves as **full-stack developers**, and about `20%` consider themselves as **mobile developers**.
-3. Most of the respondents were from the **Unites States**. For example, in the year 2020, USA had about `20%` respondents and the second highest was india with about `14%` respondents. We have plotted geographical plot using `plotly` to map how many respondents were from each country.
+3. Most of the respondents were from the **United States**. For example, in the year 2020, USA had about `20%` respondents and the second highest was india with about `14%` respondents. We have plotted geographical plot using `plotly` to map how many respondents were from each country.
 4. Consistent with the data from all three year, we still see evidence that people of color are underrepresented among professional developers. About `63%` of the respondents were of `White or european descend` 
 5. Women developers account for almost `11%` of developers in the US. Followed by Canada having `9.6%`. In countries such as Germany, India, and Poland, the participation rate is about half of that, which goes to show there is still much work to do to reach appropriate gender representation in the field.
-6. Approximately 75% of respondents worldwide completed at least the equivalent of a bachelor's degree or higher.  The average salary of respondents holding bachelors degree is $123,299. Respondents who has done Doctorate degree holds the highest mean salary of about 173,000 dollars. 
+6. Approximately 75% of respondents worldwide completed at least the equivalent of a bachelor's degree or higher.  The average salary of respondents holding bachelors degree is $123,299. Respondents who has done Doctorate degree holds the highest mean salary of about $173,000. 
 7. About `70%` of the developers are under 35 years of age. Only 5% of the respondents were about 50 years of age.
 8. Most of the Data scientist  respondents came from United States(1550). And the country which has the second highest number of data scientist is India(540)
-9. The country which pays the highest salary for Data scientist is Ireland(USD 275,851). The second highest was Luxembourg(USD 272,796). Australia pays about (USD 146,803)
+9. The country which pays the highest salary for Data scientist is Ireland($275,851). The second highest was Luxembourg($272,796). Australia pays about ($146,803)
 
 
 
@@ -361,7 +361,7 @@ Most of the respondents are in the age range 25-29. Which shows that most of the
 
 ## <a name="5.6 Salary distribution of top ten countries">5.6) Salary distribution of top ten countries</a>
 
-Overall, the contry which has highest mean annual salary is United States of America(240,000) Dollars. The second highest country which provides highest mean salary is Australia(164,926) Dollars. Though India has higher number of respondents, it has lowest mean salary of $25,213 which shows that mean salary of developed country is much higher than that of developing countries.
+Overall, the contry which has highest mean annual salary is United States of America($240,000) Dollars. The second highest country which provides highest mean salary is Australia($164,926) Dollars. Though India has higher number of respondents, it has lowest mean salary of $25,213 which shows that mean salary of developed country is much higher than that of developing countries.
 
 ```python
 fig = plt.figure(figsize = (20, 10))
@@ -422,6 +422,8 @@ In 2019, the top three countries which have a highest mean annual salary of a da
 We segregated the languages that respondents has given and found the fraction value that each languages holds in an year. We repeated the same process for the remaining years and created a data frame. 
 
 Since we have only 3 years of dataset. There is not enough data to use time series forecasting method to predict the future popularity of programming languages. With very small number of observations, there is insufficient data to split the observations into training and testing. We need more observations to build the predictive model, this question we leave for further exploration in future projects.
+
+<img src="Data/Images/ML_fraction of languages.png">
 
 ### <a name="6.2 Predicting the salary of data scientist">6.2) Predicting the salary of data scientist</a>
 
