@@ -419,8 +419,14 @@ In 2019, the top three countries which have a highest mean annual salary of a da
 
 ### Predicting the growth of languages for upcoming years based on survey answers of previous years
 
-We segregated the languages that respondents has given and found the fraction value that each languages holds in an year. We repeated the same process for the remaining years and created a data frame. 
+Each Stack Overflow survey has a 'LanguageWorkedWith' column, which describes programming languages that respondents work in over the past year.
+We have measured and use the fraction of each language and the total in that year instead of using the counts of each language in a year as it is more
+convienent for comparison. 
+<img src="Data/Images/languages_count.PNG">
 
+<img src="Data/Images/languages_fraction.PNG">
+
+<img src="Data/Images/ML_fraction of languages.png">
 Since we have only 3 years of dataset. There is not enough data to use time series forecasting method to predict the future popularity of programming languages. With very small number of observations, there is insufficient data to split the observations into training and testing. We need more observations to build the predictive model, this question we leave for further exploration in future projects.
 
 <img src="Data/Images/ML_fraction of languages.png">
@@ -438,7 +444,7 @@ We did five machine learning models to predict the salary of the data scientist.
 | 5    | Random Forest           | 0.83     | 0.32        | 1.31 |
 | 6    | Linear SVC              | 0.85     | 0.40        | 0.03 |
 
-Unfortunately, none of the models has good enough r2 values. The best model is Logistic Regression with 𝑅2R2 just approximately 0.4. We cannot confidently say that Logistic Regression is a good fit to predict the salary of Data Scientists.
+Unfortunately, none of the models has good enough r2 values. The best model is Logistic Regression with r2 just approximately 0.4. We cannot confidently say that Logistic Regression is a good fit to predict the salary of Data Scientists.
 
 **This question we leave for further exploration in future projects.**
 
