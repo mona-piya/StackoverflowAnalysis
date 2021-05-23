@@ -513,9 +513,9 @@ print("Accuracy: %.2f%%" % (accuracy * 100.0))
 
 Top 2 features negatively effecting Job Satisfaction are age, country. So, in the elderly ages job satisfaction may decrease because of the personal expectation increases. In the same way, as the professional coding years increase, satisfaction may decrease.
 
-Among the countries; most dissatisfied countries are Angolia, Rwanda, Krygyzstan, Sudan.
-UndergradMajor and other Science,are mostly satisfied.
-Most satisfied countries Malta, Ghana, Cyprus.
+- Among the countries; most dissatisfied countries are Angolia, Rwanda, Krygyzstan, Sudan.
+- UndergradMajor and other Science,are mostly satisfied.
+- Most satisfied countries Malta, Ghana, Cyprus.
 
 # <a name="7 Conclusion">Conclusion</a>
 
