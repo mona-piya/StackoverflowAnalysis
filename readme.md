@@ -58,8 +58,8 @@
       <ul>
         <li><a href="#6.1 Predicting the growth of the language">6.1 Predicting the growth of the language</a></li>
         <li><a href="#6.2 Predicting the salary of data scientist">6.2 Predicting the salary of data scientist</a></li>
-        <li><a href="#6.3 Computing Hamming Loss and Jacard Score on the above models">6.3 Computing Hamming Loss and Jacard Score on the above models</a></li>
-        <li><a href="#6.4 Predicting what causing Job Satisfaction">6.4 Predicting what causing Job Satisfaction</a></li>  
+        <li><a href="#6.2.1 Computing Hamming Loss and Jacard Score on the above models">6.2.1 Computing Hamming Loss and Jacard Score on the above models</a></li>
+        <li><a href="#6.3 Predicting what causing Job Satisfaction">6.3 Predicting what causing Job Satisfaction</a></li>  
       </ul>
     </li>
     <li>
@@ -106,7 +106,7 @@ The data are available in the CSV format ranging from 40 to 150 MB with data of 
 
 # <a name="4 Data Cleaning">Data Cleaning</a>
 
-<img src="https://images.unsplash.com/photo-1556155092-490a1ba16284?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" height=500 width=800>
+<img src="https://recodehive.com/wp-content/uploads/2021/05/Data-Cleaning-1024x361.png">
 
 As our first step, we started gathering information of all three dataset and looked into column that answers the question we have as part of our research. The below mentioned columns were choosen as keyfactors for our analysis
 
@@ -241,7 +241,7 @@ The above process has been carried out for all three data frames `2018` `2019` `
 
 ## <a name="4.3 Handling the null values">4.3) Handling the null values</a>
 
-<img src="https://images.unsplash.com/photo-1536303100418-985cb308bb38?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" height=500 width=800>
+<img src="https://recodehive.com/wp-content/uploads/2021/05/Message-from-Founder-1024x576.png">
 
 As with any large datasources, we had lot of null values that had to be handled. For instance, the 2020 datasource had 371,506 missing values(cells) in total.  Overview of how we handled null values for few of the columns are given below. Please check out jupyter notebook for how we handled null values in all other columns in all three dataset `2018` `2019` `2020`
 
@@ -310,7 +310,7 @@ All the null values were handled for all three data sets and ensured the dataset
 
 After cleaning and handling outliers in all three datasets, we started looking for valuable insights that we can draw from it.
 
-<img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80">
+<img src="https://recodehive.com/wp-content/uploads/2021/05/Message-from-Founder-1024x576.jpg">
 
 ## <a name="5.1 Distribution of respondents based on country">5.1) Distribution of respondents based on country</a>
 
@@ -419,17 +419,30 @@ In 2019, the top three countries which have a highest mean annual salary of a da
 
 ### Predicting the growth of languages for upcoming years based on survey answers of previous years
 
-We segregated the languages that respondents has given and found the fraction value that each languages holds in an year. We repeated the same process for the remaining years and created a data frame. 
+Each Stack Overflow survey has a 'LanguageWorkedWith' column, which describes programming languages that respondents worked in over the past year.
+We have measured and used the fraction of each language and the total, instead of using the counts of each language in a year as it is more
+convienent for comparison. 
 
-Since we have only 3 years of dataset. There is not enough data to use time series forecasting method to predict the future popularity of programming languages. With very small number of observations, there is insufficient data to split the observations into training and testing. We need more observations to build the predictive model, this question we leave for further exploration in future projects.
+<img src="Data/Images/languages.PNG">
 
+During 2018 to 2020 the 10 most popular programming languages remain the same: JavaScript, HTML/CSS, SQL, Python, Java, Bash/Shell/PowerShell, C#, PHP, TypeScript and C++.
 <img src="Data/Images/ML_fraction of languages.png">
+
+We planned to predict the growth of languages for upcoming years by using time series forecasting such as ARIMA model.
+Unfortunately, we have only 3 years of dataset, there is not enough data to use time series forecasting. 
+With a very small number of observations, there is insufficient data to split the observations into training and testing. 
+More observations are needed to build the predictive model. **Further exploration in future projects may be needed to explain this question**
+
 
 ### <a name="6.2 Predicting the salary of data scientist">6.2) Predicting the salary of data scientist</a>
 
-We did five machine learning models to predict the salary of the data scientist. Our findings are given below.
+To predict the salary of data scientist, the target SalaryUSD is divided into 2 groups: SalaryUSD < median and SalaryUSD >= median, and which are converted to a categorical variable by label encoding.
 
-| Sno  | Model                   | Accuracy | $R^2$ Score | Time |
+In the features selection process, there are 5 features which are Age, Country, EdLevel, DevType and YearsCodePro which provided the best accuracy scores.
+
+Six classification models for machine learning were used to predict the salary of the data scientists. Our findings are given below.
+
+| Sno  | Model                   | Accuracy | R2 Score | Time |
 | ---- | ----------------------- | -------- | ----------- | ---- |
 | 1    | Decision Tree           | 0.830    | 0.32        | 0.06 |
 | 2    | Multinomial Naive Bayes | 0.833    | 0.33        | 0.01 |
@@ -438,16 +451,43 @@ We did five machine learning models to predict the salary of the data scientist.
 | 5    | Random Forest           | 0.83     | 0.32        | 1.31 |
 | 6    | Linear SVC              | 0.85     | 0.40        | 0.03 |
 
-Unfortunately, none of the models has good enough r2 values. The best model is Logistic Regression with 𝑅2R2 just approximately 0.4. We cannot confidently say that Logistic Regression is a good fit to predict the salary of Data Scientists.
+Most models shows relatively high accuracy score(more than 80%), unfortunately, none of them has acceptable R2 values. 
+The best model is Logistic Regression with R2 just approximately 0.4. 
+It is not confidently said that Logistic Regression is a good fit to predict the salary of Data Scientists.
 
-**This question we leave for further exploration in future projects.**
 
-### <a name="6.3 Computing Hamming Loss and Jacard Score on the above models">6.3) Computing Hamming Loss and Jacard Score on the above models</a>
+#### <a name="6.2.1 Computing Hamming Loss and Jacard Score on the above models">6.2.1) Computing Hamming Loss and Jacard Score on the above models</a>
 
-### <a name="6.4 Predicting what causing Job Satisfaction">6.4) Predicting what causing Job Satisfaction</a>
+- Hamming loss is the fraction of labels that are incorrectly predicted ( evaluation metrics for a classifier model.)<br>
+  Hamming loss value range between 0 and 1, Having HL less is the best.
+- The Jaccard Index, also known as the Jaccard similarity coefficient, is a statistic used in understanding the similarities between sample sets. (To measure Similarity)<br>
+  Jaccard , is a measurement utilized in understanding the similitudes between test sets. The estimation underscores comparability between limited example sets, and is    officially characterized as the size of the crossing point separated by the size of the association of the example sets.
 
+| Sno  | Model                   | HL       | Jaccard Score | 
+| ---- | ----------------------- | -------- | -----------   |
+| 1    | Random Forest           | 0.1660   | 0.7088        | 
+| 2    | MLPClassifier           | 0.1729   | 0.7081        | 
+| 3    | SGDClassifier           | 0.1473   | 0.7400        | 
+| 4    | Logistic Regression     | 0.1481   | 0.7402        | 
+| 5    | MultinomialNB           | 0.1680   | 0.7124        | 
+| 6    | Linear SVC              | 0.1481   | 0.7444        |
+
+It has been found that better Hamming loss has been found in Logistic Regression and Linear SVC which is 0.14815
+Jaccard similarity scores gives us distribution of label sets when using the models.
+
+### <a name="6.3 Predicting what causing Job Satisfaction">6.3) Predicting what causing Job Satisfaction</a>
+An examination of work satisfaction variables based on Stack Over Flow survey data from 2020.
+Job satisfaction can be defined by factors such as compensation, benefits, work environment, team members, work-life balance, education level, place, technology used, and so on. By analysing the Stack Over Flow survey data from 2020, I will try to find some features that are negatively and positively affecting job satisfaction in various countries.
+
+- Best mean cross-validation score: -0.262
+- Test-set score: -0.261
+
+Here Random Forest is used to Predict the Job satisfaction, model did not yield much better output and turned out to be very complex to get insights. This question we leave for further exploration in future projects using Random forest Regressor which may yield good results.
 
 # <a name="7 Conclusion">Conclusion</a>
 
+Overall, we performed various analyses on the Stack overflow developer survey and derived insights from it. 
+We found which country has the highest no of respondents, which is the most popular language, education level of respondents, different roles of developers, and so on.
 
+Additionally, we performed machine learning models to predict the growth of languages, the salary of data scientists, what is causing job satisfaction.  We build six machine learning models for the same.
 
