@@ -481,7 +481,7 @@ Job satisfaction can be defined by factors such as compensation, benefits, work 
 - Best mean cross-validation score: -0.262
 - Test-set score: -0.261
 
-Here Random Forest is used to Predict the Job satisfaction, model did not yield much better output and turned out to be very complex to get insights. This question we leave for further exploration in future projects using Random forest Regressor which may yield good results.
+Here Random Forest is used to Predict the Job satisfaction, model did not yield much better output and turned out to be very complex to get insights. Logistic Regression or Random forest Regressor which may yield good results. Proceeding with Logistic Regression to find features affecting Job Satisfaction.
 
 ### Used Logistic Regression
 By analysing the Stack Over Flow survey data from 2020, tried to find some features that are negatively and positively affecting job satisfaction in various countries.
