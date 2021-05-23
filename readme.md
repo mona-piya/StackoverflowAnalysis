@@ -436,10 +436,12 @@ We need more observations to build the predictive model, **this question we leav
 
 ### <a name="6.2 Predicting the salary of data scientist">6.2) Predicting the salary of data scientist</a>
 
-To predict the salary of data scientist, we found 6 features which are Age, Country, EdLevel, DevType, YearsCodePro and SalaryUSD
-gave the best accuracy scores in the features selection process.
+To predict the salary of data scientist, we divided target SalaryUSD into 2 groups: SalaryUSD < median and SalaryUSD >= median, and convert it to 
+a categorical variable by label encoding.
 
-We did six machine learning models to predict the salary of the data scientist. Our findings are given below.
+We found 5 features which are Age, Country, EdLevel, DevType and YearsCodePro gave the best accuracy scores in the features selection process.
+
+Six classification models for machine learning were used to predict the salary of the data scientist. Our findings are given below.
 
 | Sno  | Model                   | Accuracy | R2 Score | Time |
 | ---- | ----------------------- | -------- | ----------- | ---- |
