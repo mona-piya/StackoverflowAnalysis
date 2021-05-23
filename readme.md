@@ -419,21 +419,27 @@ In 2019, the top three countries which have a highest mean annual salary of a da
 
 ### Predicting the growth of languages for upcoming years based on survey answers of previous years
 
-Each Stack Overflow survey has a 'LanguageWorkedWith' column, which describes programming languages that respondents work in over the past year.
-We have measured and use the fraction of each language and the total in that year instead of using the counts of each language in a year as it is more
+Each Stack Overflow survey has a 'LanguageWorkedWith' column, which describes programming languages that respondents worked in over the past year.
+We have measured and used the fraction of each language and the total, instead of using the counts of each language in a year as it is more
 convienent for comparison. 
 
 <img src="Data/Images/languages.PNG">
 
-During 2018 to 2020 The 10 most popular programming languages remain the same: JavaScript, HTML/CSS, SQL, Python, Java, Bash/Shell/PowerShell, C#, PHP, TypeScript and C++.
+During 2018 to 2020 the 10 most popular programming languages remain the same: JavaScript, HTML/CSS, SQL, Python, Java, Bash/Shell/PowerShell, C#, PHP, TypeScript and C++.
 <img src="Data/Images/ML_fraction of languages.png">
 
-Since we have only 3 years of dataset. There is not enough data to use time series forecasting method to predict the future popularity of programming languages. With very small number of observations, there is insufficient data to split the observations into training and testing. We need more observations to build the predictive model, this question we leave for further exploration in future projects.
+We planed to predict the growth of languages for upcoming years by using time series forecasting such ARIMA model.
+Unfortunately, we have only 3 years of the dataset. There is not enough data to use time series forecasting. 
+With a very small number of observations, there is insufficient data to split the observations into training and testing. 
+We need more observations to build the predictive model, **this question we leave for further exploration in future projects.**
 
 
 ### <a name="6.2 Predicting the salary of data scientist">6.2) Predicting the salary of data scientist</a>
 
-We did five machine learning models to predict the salary of the data scientist. Our findings are given below.
+To predict the salary of data scientist, we found 6 features which are Age, Country, EdLevel, DevType, YearsCodePro and SalaryUSD
+gave the best accuracy scores in the features selection process.
+
+We did six machine learning models to predict the salary of the data scientist. Our findings are given below.
 
 | Sno  | Model                   | Accuracy | $R^2$ Score | Time |
 | ---- | ----------------------- | -------- | ----------- | ---- |
@@ -444,7 +450,9 @@ We did five machine learning models to predict the salary of the data scientist.
 | 5    | Random Forest           | 0.83     | 0.32        | 1.31 |
 | 6    | Linear SVC              | 0.85     | 0.40        | 0.03 |
 
-Unfortunately, none of the models has good enough r2 values. The best model is Logistic Regression with r2 just approximately 0.4. We cannot confidently say that Logistic Regression is a good fit to predict the salary of Data Scientists.
+Most models gave quite high accuracy score (more than 80%). Unfortunately, none of them has good enough r2 values. 
+The best model is Logistic Regression with r2 just approximately 0.4. 
+We cannot confidently say that Logistic Regression is a good fit to predict the salary of Data Scientists.
 
 **This question we leave for further exploration in future projects.**
 
