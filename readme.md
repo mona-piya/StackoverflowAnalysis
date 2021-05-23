@@ -476,16 +476,18 @@ It has been found that better Hamming loss has been found in Logistic Regression
 Jaccard similarity scores gives us distribution of label sets when using the models.
 
 ### <a name="6.3 Predicting what causing Job Satisfaction">6.3) Predicting what causing Job Satisfaction</a>
+An examination of work satisfaction variables based on Stack Over Flow survey data from 2020.
+Job satisfaction can be defined by factors such as compensation, benefits, work environment, team members, work-life balance, education level, place, technology used, and so on. By analysing the Stack Over Flow survey data from 2020, I will try to find some features that are negatively and positively affecting job satisfaction in various countries.
 
-<img src="https://recodehive.com/wp-content/uploads/2021/05/2021-05-22_13-04-58-1024x575.png">
-
-- best mean cross-validation score: -0.262
-- best parameters: {'max_depth': 40, 'min_samples_leaf': 10}
-- test-set score: -0.261
+- Best mean cross-validation score: -0.262
+- Test-set score: -0.261
 
 Here Random Forest is used to Predict the Job satisfaction, model did not yield much better output and turned out to be very complex to get insights. This question we leave for further exploration in future projects using Random forest Regressor which may yield good results.
 
 # <a name="7 Conclusion">Conclusion</a>
 
+Overall, we performed various analyses on the Stack overflow developer survey and derived insights from it. 
+We found which country has the highest no of respondents, which is the most popular language, education level of respondents, different roles of developers, and so on.
 
+Additionally, we performed machine learning models to predict the growth of languages, the salary of data scientists, what is causing job satisfaction.  We build six machine learning models for the same.
 
