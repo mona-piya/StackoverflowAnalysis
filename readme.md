@@ -431,8 +431,7 @@ During 2018 to 2020 the 10 most popular programming languages remain the same: J
 We planned to predict the growth of languages for upcoming years by using time series forecasting such as ARIMA model.
 Unfortunately, we have only 3 years of dataset, there is not enough data to use time series forecasting. 
 With a very small number of observations, there is insufficient data to split the observations into training and testing. 
-More observations are needed to build the predictive model.
-**further exploration in future projects may be needed to explain this question**
+More observations are needed to build the predictive model. **Further exploration in future projects may be needed to explain this question**
 
 
 ### <a name="6.2 Predicting the salary of data scientist">6.2) Predicting the salary of data scientist</a>
