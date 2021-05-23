@@ -455,7 +455,7 @@ The best model is Logistic Regression with R2 just approximately 0.4.
 We cannot confidently say that Logistic Regression is a good fit to predict the salary of Data Scientists.
 
 
-#### <a name="6.2.1 Computing Hamming Loss and Jacard Score on the above models">6.3) Computing Hamming Loss and Jacard Score on the above models</a>
+#### <a name="6.2.1 Computing Hamming Loss and Jacard Score on the above models">6.2.1) Computing Hamming Loss and Jacard Score on the above models</a>
 
 - Hamming loss is the fraction of labels that are incorrectly predicted ( evaluation metrics for a classifier model.)<br>
   Hamming loss value range between 0 and 1, Having HL less is the best.
