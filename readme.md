@@ -422,14 +422,14 @@ In 2019, the top three countries which have a highest mean annual salary of a da
 Each Stack Overflow survey has a 'LanguageWorkedWith' column, which describes programming languages that respondents work in over the past year.
 We have measured and use the fraction of each language and the total in that year instead of using the counts of each language in a year as it is more
 convienent for comparison. 
-<img src="Data/Images/languages_count.PNG">
+
+<img src="Data/Images/languages.PNG">
 
 During 2018 to 2020 The 10 most popular programming languages remain the same: JavaScript, HTML/CSS, SQL, Python, Java, Bash/Shell/PowerShell, C#, PHP, TypeScript and C++.
 <img src="Data/Images/ML_fraction of languages.png">
 
 Since we have only 3 years of dataset. There is not enough data to use time series forecasting method to predict the future popularity of programming languages. With very small number of observations, there is insufficient data to split the observations into training and testing. We need more observations to build the predictive model, this question we leave for further exploration in future projects.
 
-<img src="Data/Images/ML_fraction of languages.png">
 
 ### <a name="6.2 Predicting the salary of data scientist">6.2) Predicting the salary of data scientist</a>
 
