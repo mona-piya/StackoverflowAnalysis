@@ -58,8 +58,8 @@
       <ul>
         <li><a href="#6.1 Predicting the growth of the language">6.1 Predicting the growth of the language</a></li>
         <li><a href="#6.2 Predicting the salary of data scientist">6.2 Predicting the salary of data scientist</a></li>
-        <li><a href="#6.3 Computing Hamming Loss and Jacard Score on the above models">6.3 Computing Hamming Loss and Jacard Score on the above models</a></li>
-        <li><a href="#6.4 Predicting what causing Job Satisfaction">6.4 Predicting what causing Job Satisfaction</a></li>  
+        <li><a href="#6.2.1 Computing Hamming Loss and Jacard Score on the above models">6.2.1 Computing Hamming Loss and Jacard Score on the above models</a></li>
+        <li><a href="#6.3 Predicting what causing Job Satisfaction">6.3 Predicting what causing Job Satisfaction</a></li>  
       </ul>
     </li>
     <li>
@@ -474,7 +474,7 @@ We cannot confidently say that Logistic Regression is a good fit to predict the 
 It has been found that better Hamming loss has been found in Logistic Regression and Linear SVC which is 0.14815
 Jaccard similarity scores gives us distribution of label sets when using the models.
 
-### <a name="6.4 Predicting what causing Job Satisfaction">6.4) Predicting what causing Job Satisfaction</a>
+### <a name="6.3 Predicting what causing Job Satisfaction">6.3) Predicting what causing Job Satisfaction</a>
 
 <img src="https://recodehive.com/wp-content/uploads/2021/05/2021-05-22_13-04-58-1024x575.png">
 
