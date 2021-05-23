@@ -441,7 +441,7 @@ gave the best accuracy scores in the features selection process.
 
 We did six machine learning models to predict the salary of the data scientist. Our findings are given below.
 
-| Sno  | Model                   | Accuracy | $R^2$ Score | Time |
+| Sno  | Model                   | Accuracy | R2 Score | Time |
 | ---- | ----------------------- | -------- | ----------- | ---- |
 | 1    | Decision Tree           | 0.830    | 0.32        | 0.06 |
 | 2    | Multinomial Naive Bayes | 0.833    | 0.33        | 0.01 |
@@ -450,13 +450,12 @@ We did six machine learning models to predict the salary of the data scientist. 
 | 5    | Random Forest           | 0.83     | 0.32        | 1.31 |
 | 6    | Linear SVC              | 0.85     | 0.40        | 0.03 |
 
-Most models gave quite high accuracy score (more than 80%). Unfortunately, none of them has good enough r2 values. 
-The best model is Logistic Regression with r2 just approximately 0.4. 
+Most models gave quite high accuracy score (more than 80%). Unfortunately, none of them has good enough R2 values. 
+The best model is Logistic Regression with R2 just approximately 0.4. 
 We cannot confidently say that Logistic Regression is a good fit to predict the salary of Data Scientists.
 
-**This question we leave for further exploration in future projects.**
 
-### <a name="6.3 Computing Hamming Loss and Jacard Score on the above models">6.3) Computing Hamming Loss and Jacard Score on the above models</a>
+#### <a name="6.2.1 Computing Hamming Loss and Jacard Score on the above models">6.3) Computing Hamming Loss and Jacard Score on the above models</a>
 
 - Hamming loss is the fraction of labels that are incorrectly predicted ( evaluation metrics for a classifier model.)<br>
   Hamming loss value range between 0 and 1, Having HL less is the best.
