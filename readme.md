@@ -428,10 +428,11 @@ convienent for comparison.
 During 2018 to 2020 the 10 most popular programming languages remain the same: JavaScript, HTML/CSS, SQL, Python, Java, Bash/Shell/PowerShell, C#, PHP, TypeScript and C++.
 <img src="Data/Images/ML_fraction of languages.png">
 
-We planed to predict the growth of languages for upcoming years by using time series forecasting such ARIMA model.
-Unfortunately, we have only 3 years of the dataset. There is not enough data to use time series forecasting. 
+We planned to predict the growth of languages for upcoming years by using time series forecasting such as ARIMA model.
+Unfortunately, we have only 3 years of dataset, there is not enough data to use time series forecasting. 
 With a very small number of observations, there is insufficient data to split the observations into training and testing. 
-We need more observations to build the predictive model, **this question we leave for further exploration in future projects.**
+More observations are needed to build the predictive model.
+**further exploration in future projects may be needed to explain this question**
 
 
 ### <a name="6.2 Predicting the salary of data scientist">6.2) Predicting the salary of data scientist</a>
