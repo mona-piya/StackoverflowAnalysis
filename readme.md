@@ -72,27 +72,27 @@
 
 This repository holds **project** submission for the unit **COMP6200 - Data Science**. 
 
-Stack overflow is a professional community for developers. They conduct developer surveys every year since 2011, and the collected data is available open source on the web. The latest dataset 2020 was released on March 5th, 2021. With proper analysis, the Dataset would help us to answer real-world questions. For instance, we can find the most popular language that the developer use, or we can find the developer role which pays the highest salary. Our project is to analyse last three years of developer survey and gather meaningful insights from it.
+Stack overflow is a professional community for developers. They conduct developer surveys every year since 2011, and the collected data is available open-source on the web. The latest dataset 2020 was released on March 5th, 2021. With proper analysis, the Dataset would help us to answer real-world questions. For instance, we can find the most popular language that the developers use.We also can find the developer role which pays the highest salary. Our project is to analyze the last three years of the developer survey and gather meaningful insights from it.
 
-As a first step, we will clean the data by removing null values and outliers in each columns. Then, refactor the columns in such a way that help us in analysis. Then we performed data analysis and machine learning on the cleaned dataset.  We  used machine learning to understand the growth of languages and the salary for data scientist in the upcoming years.
+As a first step, we will clean the data by removing null values and outliers in each column. Then, refactor the columns in such a way that help us in analysis. Then we performed data analysis and machine learning on the cleaned dataset.  We  used machine learning to understand the growth of languages and the salary for data scientists in the upcoming years.
 
-The questions that we answered as part of analysis were given in the `Data analysis and visualization section`. Please refer to the Jupyter notebook file for all the codes. This `readme.md` file explains the key steps and results that we got as part of our project.
+The questions that we answered as part of the analysis were given in the `Data analysis and visualization section`. Please refer to the Jupyter notebook file for all the codes. This `readme.md` file explains the key steps and results that we got as part of our project.
 
 # <a name="2 Data Source">Data source:</a>
 
 The dataset is very diverse and came from a Stack overflow developer survey from 180 countries. Stack overflow has data collected through surveys from 2011 to 2020. We choose 2018,2019 and 2020 to analyze for the projects. The participants mostly from the US, India, and EMEA regions. The majority of the survey respondents had a background of developer/ coding experience. We performed various analysis and our key results are given in the `Data Analysis` section.
 
-Dataset can be downloaded from the below mentioned link.
+Dataset can be downloaded from the mentioned below link:
 
 **Download Link** ->   https://insights.stackoverflow.com/survey
 
-The data are available in the CSV format ranging from 40 to 150 MB with data of 1.5 Lakh survey participants. The attributes are 130,86 and 62 respectively for the years of 2018,2019 and 2020. For our project, we focused on specific features. As a result, we specificaly chose column that were required for our analysis and dropped the ones which were not required.
+The data are available in the CSV format ranging from 40 to 150 MB with data of 1.5 Lakh survey participants. The attributes are 130,86 and 62 respectively for the years of 2018,2019 and 2020. For our project, we focused on specific features. As a result, we specifically chose columns which required for our analysis and dropped the ones which were not required.
 
  The reason why we chose this dataset is because of its diverse nature and it was completely uncleaned.  We, as a developer, use Stack overflow to find answers for most of the questions we get. That encouraged us to explore and derive key insights from the survey results. Also, the Insights can be used for a better understanding of the information technology and hiring employees and job seekers for preparing the career resume building.
 
 # <a name="3 Key Insights">Key Insights</a>
 
-1. JavaScript has maintained it's stronghold as the most commonly used programming language. Almost 70% of the respondents are using Javascript. HTML/CSS stands as the second most popular language with about 63%
+1. JavaScript has maintained its stronghold as the most commonly used programming language. Almost 70% of the respondents are using Javascript. HTML/CSS stands as the second most popular language with about 63%
 2. About `55%` of respondents identify themselves as **full-stack developers**, and about `20%` consider themselves as **mobile developers**.
 3. Most of the respondents were from the **United States**. For example, in the year 2020, USA had about `20%` respondents and the second highest was india with about `14%` respondents. We have plotted geographical plot using `plotly` to map how many respondents were from each country.
 4. Consistent with the data from all three year, we still see evidence that people of color are underrepresented among professional developers. About `63%` of the respondents were of `White or european descend` 
@@ -421,14 +421,14 @@ In 2019, the top three countries which have a highest mean annual salary of a da
 
 Each Stack Overflow survey has a 'LanguageWorkedWith' column, which describes programming languages that respondents worked in over the past year.
 We have measured and used the fraction of each language and the total, instead of using the counts of each language in a year as it is more
-convienent for comparison. 
+convenient for comparison. 
 
 <img src="Data/Images/languages.PNG">
 
-During 2018 to 2020 the 10 most popular programming languages remain the same: JavaScript, HTML/CSS, SQL, Python, Java, Bash/Shell/PowerShell, C#, PHP, TypeScript and C++.
+From 2018 to 2020 the 10 most popular programming languages remain the same: JavaScript, HTML/CSS, SQL, Python, Java, Bash/Shell/PowerShell, C#, PHP, TypeScript and C++.
 <img src="Data/Images/ML_fraction of languages.png">
 
-We planned to predict the growth of languages for upcoming years by using time series forecasting such as ARIMA model.
+We planned to predict the growth of languages for upcoming years by using time series forecasting such as the ARIMA model.
 Unfortunately, we have only 3 years of dataset, there is not enough data to use time series forecasting. 
 With a very small number of observations, there is insufficient data to split the observations into training and testing. 
 More observations are needed to build the predictive model. **Further exploration in future projects may be needed to explain this question**
@@ -436,7 +436,7 @@ More observations are needed to build the predictive model. **Further exploratio
 
 ### <a name="6.2 Predicting the salary of data scientist">6.2) Predicting the salary of data scientist</a>
 
-To predict the salary of data scientist, the target SalaryUSD is divided into 2 groups: SalaryUSD < median and SalaryUSD >= median, and which are converted to a categorical variable by label encoding.
+To predict the salary of data scientists, the target SalaryUSD is divided into 2 groups: SalaryUSD < median and SalaryUSD >= median, and which are converted to a categorical variable by label encoding.
 
 In the features selection process, there are 5 features which are Age, Country, EdLevel, DevType and YearsCodePro which provided the best accuracy scores.
 
@@ -451,7 +451,7 @@ Six classification models for machine learning were used to predict the salary o
 | 5    | Random Forest           | 0.83     | 0.32        | 1.31 |
 | 6    | Linear SVC              | 0.85     | 0.40        | 0.03 |
 
-Most models shows relatively high accuracy score(more than 80%), unfortunately, none of them has acceptable R2 values. 
+Most models show relatively high accuracy scores(more than 80%), unfortunately, none of them has acceptable R2 values. 
 The best model is Logistic Regression with R2 just approximately 0.4. 
 It is not confidently said that Logistic Regression is a good fit to predict the salary of Data Scientists.
 
@@ -461,7 +461,7 @@ It is not confidently said that Logistic Regression is a good fit to predict the
 - Hamming loss is the fraction of labels that are incorrectly predicted ( evaluation metrics for a classifier model.)<br>
   Hamming loss value range between 0 and 1, Having HL less is the best.
 - The Jaccard Index, also known as the Jaccard similarity coefficient, is a statistic used in understanding the similarities between sample sets. (To measure Similarity)<br>
-  Jaccard , is a measurement utilized in understanding the similitudes between test sets. The estimation underscores comparability between limited example sets, and is    officially characterized as the size of the crossing point separated by the size of the association of the example sets.
+  Jaccard  is a measurement utilized in understanding the similitudes between test sets. The estimation underscores comparability between limited example sets and is    officially characterized as the size of the crossing point separated by the size of the association of the example sets.
 
 | Sno  | Model                   | HL       | Jaccard Score | 
 | ---- | ----------------------- | -------- | -----------   |
@@ -473,7 +473,7 @@ It is not confidently said that Logistic Regression is a good fit to predict the
 | 6    | Linear SVC              | 0.1481   | 0.7444        |
 
 It has been found that better Hamming loss has been found in Logistic Regression and Linear SVC which is 0.14815
-Jaccard similarity scores gives us distribution of label sets when using the models.
+Jaccard similarity scores gives us the distribution of label sets when using the models.
 
 ### <a name="6.3 Predicting what causing Job Satisfaction">6.3) Predicting what causing Job Satisfaction</a>
 An examination of work satisfaction variables based on Stack Over Flow survey data from 2020.
