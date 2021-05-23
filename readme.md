@@ -477,12 +477,45 @@ Jaccard similarity scores gives us the distribution of label sets when using the
 
 ### <a name="6.3 Predicting what causing Job Satisfaction">6.3) Predicting what causing Job Satisfaction</a>
 An examination of work satisfaction variables based on Stack Over Flow survey data from 2020.
-Job satisfaction can be defined by factors such as compensation, benefits, work environment, team members, work-life balance, education level, place, technology used, and so on. By analysing the Stack Over Flow survey data from 2020, I will try to find some features that are negatively and positively affecting job satisfaction in various countries.
-
+Job satisfaction can be defined by factors such as compensation, benefits, work environment, team members, work-life balance, education level, place, and so on. 
 - Best mean cross-validation score: -0.262
 - Test-set score: -0.261
 
 Here Random Forest is used to Predict the Job satisfaction, model did not yield much better output and turned out to be very complex to get insights. This question we leave for further exploration in future projects using Random forest Regressor which may yield good results.
+
+### Used Logistic Regression
+By analysing the Stack Over Flow survey data from 2020, tried to find some features that are negatively and positively affecting job satisfaction in various countries.
+Used Sklearn library to create a Logistic Regression model. Before creting model, need to create data, Using model coefficients, features that has negative and positive effect on job satisfaction to be calculated.
+
+#### Performing further Spliting of CurrentJobSatis Coloumn
+
+- Deleted "Neither satisfied nor dissatisfied"
+- Combined "Very satisfied" and "Slightly satisfied", label as "Satisfied" -->1
+- Combined "Very dissatisfied" and "Slightly dissatisfied", label as "Dissatisfied"-->0
+- Deleted rows "Neither satisfied nor dissatisfied"
+
+```python
+##Finding the Accuracy of the Test by defining the model define the model
+model = LogisticRegression()
+# fit the model
+model.fit(X, y)
+
+# get importance
+importance = model.coef_[0]
+
+# make predictions for test data and evaluate
+y_pred = model.predict(X_test)
+predictions = [round(value) for value in y_pred]
+accuracy = accuracy_score(y_test, predictions)
+print("Accuracy: %.2f%%" % (accuracy * 100.0))
+```
+<img src="https://recodehive.com/wp-content/uploads/2021/05/Logistic-Regression.png">
+
+Top 2 features negatively effecting Job Satisfaction are age, country. So, in the elderly ages job satisfaction may decrease because of the personal expectation increases. In the same way, as the professional coding years increase, satisfaction may decrease.
+
+Among the countries; most dissatisfied countries are Angolia, Rwanda, Krygyzstan, Sudan.
+UndergradMajor and other Science,are mostly satisfied.
+Most satisfied countries Malta, Ghana, Cyprus.
 
 # <a name="7 Conclusion">Conclusion</a>
 
