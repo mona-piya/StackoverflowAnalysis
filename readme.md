@@ -436,12 +436,11 @@ We need more observations to build the predictive model, **this question we leav
 
 ### <a name="6.2 Predicting the salary of data scientist">6.2) Predicting the salary of data scientist</a>
 
-To predict the salary of data scientist, we divided target SalaryUSD into 2 groups: SalaryUSD < median and SalaryUSD >= median, and convert it to 
-a categorical variable by label encoding.
+To predict the salary of data scientist, the target SalaryUSD is divided into 2 groups: SalaryUSD < median and SalaryUSD >= median, and which are converted to a categorical variable by label encoding.
 
-We found 5 features which are Age, Country, EdLevel, DevType and YearsCodePro gave the best accuracy scores in the features selection process.
+In the features selection process, there are 5 features which are Age, Country, EdLevel, DevType and YearsCodePro which provided the best accuracy scores.
 
-Six classification models for machine learning were used to predict the salary of the data scientist. Our findings are given below.
+Six classification models for machine learning were used to predict the salary of the data scientists. Our findings are given below.
 
 | Sno  | Model                   | Accuracy | R2 Score | Time |
 | ---- | ----------------------- | -------- | ----------- | ---- |
@@ -452,9 +451,9 @@ Six classification models for machine learning were used to predict the salary o
 | 5    | Random Forest           | 0.83     | 0.32        | 1.31 |
 | 6    | Linear SVC              | 0.85     | 0.40        | 0.03 |
 
-Most models gave quite high accuracy score (more than 80%). Unfortunately, none of them has good enough R2 values. 
+Most models shows relatively high accuracy score(more than 80%), unfortunately, none of them has acceptable R2 values. 
 The best model is Logistic Regression with R2 just approximately 0.4. 
-We cannot confidently say that Logistic Regression is a good fit to predict the salary of Data Scientists.
+It is not confidently said that Logistic Regression is a good fit to predict the salary of Data Scientists.
 
 
 #### <a name="6.2.1 Computing Hamming Loss and Jacard Score on the above models">6.2.1) Computing Hamming Loss and Jacard Score on the above models</a>
