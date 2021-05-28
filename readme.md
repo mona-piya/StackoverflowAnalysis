@@ -524,3 +524,5 @@ We found which country has the highest no of respondents, which is the most popu
 
 Additionally, we performed machine learning models to predict the growth of languages, the salary of data scientists, what is causing job satisfaction.  We build six machine learning models for the same.
 
+- Project Presentation Sides -> https://www.canva.com/design/DAEdO-AUjRY/beEs8h-x6erz4d8s_XXsbw/view
+- Project Presentation video -> https://echo360.org.au/media/7977707f-3488-42ed-b144-f37ae3e88db1/public
