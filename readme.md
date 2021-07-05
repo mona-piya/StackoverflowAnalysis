@@ -7,14 +7,7 @@
 <br>
 <h2 align="centre">Project-S1-2021 (GROUP-14)</h2>
 
-<h3 align="left">Student Details</h3>
-
-| Sno  | Name                        | StudentID |
-| ---- | --------------------------- | --------- |
-| 1    | Piyakorn Munegan            | 46318461  |
-| 2    | Sabiha Sultana              | 46804994  |
-| 3    | Sanjay Kanakkot Viswanathan | 46313966  |
-| 4    | Mohammed Rizwan Amanullah   | 46277404  |
+<h3 align="left">This project has been done by my group project for the unit Data Science</h3>
 
 <!-- TABLE OF CONTENTS -->
 
